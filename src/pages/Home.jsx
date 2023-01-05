@@ -89,7 +89,7 @@ function Home() {
       
         <article class='oneHalf smallerPadding'>
           <br></br><br></br><br></br>
-          1. Install the npm package
+          Install the npm package
           <div class='flex'>
             <div id='copyWindow' onclick={ copyNpm }>
               npm i solid-rewind
@@ -100,13 +100,13 @@ function Home() {
             </div>
           </div>
           <br></br><br></br><br></br><br></br>
-          2. Import Rewind. Wrap Rewind around the top-level component.
+          Import Rewind. Wrap Rewind around the top-level component.
 
           <RewindWrapper />
           {/* <CodeMirror extensions={[basicSetup, python()]} theme={oneDark} showLineNumbers={true} readOnly={true} wrapLine={true} value="print()" /> */}
 
           <br></br><br></br><br></br><br></br>
-          3. Use the Solid-Rewind Chrome Extension to debug your app.
+          Use the Solid-Rewind Chrome Extension to debug your app.
           <br></br>
           👉&nbsp;&nbsp;Download <a href='https://chrome.google.com/webstore/detail/solid-rewind/ejdinegdopmimnkbonknknhfmmcgcdoh' target='_blank'>here</a>.
 
@@ -130,7 +130,7 @@ function Home() {
 
         <div class='twoThird smallerPadding'>
           <figure class='fullbox aboutImage'>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/kJQP7kiw5Fk?frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; allowfullscreen" ></iframe>
+            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/kJQP7kiw5Fk?frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; allowfullscreen" ></iframe> */}
 
             <img class='transparent' src={screenshot}></img>
           </figure>
