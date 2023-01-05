@@ -34,7 +34,8 @@ a {
   justify-content: space-between;
   padding: 0 4vw;
   z-index: 5000;
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px); */
+  background-color: #000;
 }
 
 .navItem {
@@ -300,4 +301,8 @@ button:hover {
 
 #copyWindow:hover #copyIcon {
     opacity: 80%; 
+}
+
+#rewindWrapper {
+  margin-top: 2vw;
 }

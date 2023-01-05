@@ -55,6 +55,7 @@ function Home() {
 
       </header>
 
+      {/* INTRO */}
       <section class='contentSection'>
         <div class='oneThird'>
           <h3>
@@ -77,16 +78,18 @@ function Home() {
         
       </section>
 
-      <section class='contentSection' id='install'>
-        <div class='oneHalf'>
+
+      {/* INSTALLATION */}
+      <section class='contentSection noPadding' id='install'>
+        <div class='oneHalf smallerPadding'>
           <h3>
             easy to install
           </h3>
         </div>
       
-        <article class='oneHalf'>
-          <br></br><br></br><br></br><br></br>
-          Install the npm package
+        <article class='oneHalf smallerPadding'>
+          <br></br><br></br><br></br>
+          1. Install the npm package
           <div class='flex'>
             <div id='copyWindow' onclick={ copyNpm }>
               npm i solid-rewind
@@ -97,22 +100,22 @@ function Home() {
             </div>
           </div>
           <br></br><br></br><br></br><br></br>
-          Import Rewind. Wrap Rewind around the top-level component.
+          2. Import Rewind. Wrap Rewind around the top-level component.
 
           <RewindWrapper />
           {/* <CodeMirror extensions={[basicSetup, python()]} theme={oneDark} showLineNumbers={true} readOnly={true} wrapLine={true} value="print()" /> */}
 
           <br></br><br></br><br></br><br></br>
-          Use the Solid-Rewind Chrome Extension to debug your app.
+          3. Use the Solid-Rewind Chrome Extension to debug your app.
           <br></br>
-          Download <a href=''>here</a>.
+          Download <a href='https://chrome.google.com/webstore/detail/solid-rewind/ejdinegdopmimnkbonknknhfmmcgcdoh' target='_blank'>here</a>.
 
         </article>
 
       </section>
 
 
-
+      {/* FEATURES */}
       <section class='contentSection noPadding'>
         <div class='oneThird rightBorder smallerPadding'>
           <h3>

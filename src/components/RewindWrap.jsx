@@ -24,7 +24,19 @@ function RewindWrapper() {
         <App />
     }, document.getElementById('root'));
     
-    `,18],
+
+    `,10],
+
+
+    [`import Rewind from 'solid-rewind';
+
+    render( () => {
+        <
+        <App />
+    }, document.getElementById('root'));
+
+    `,1],
+
 
 
     [`import Rewind from 'solid-rewind';
@@ -33,6 +45,17 @@ function RewindWrapper() {
         <R
         <App />
     }, document.getElementById('root'));
+
+    `,1],
+
+
+    [`import Rewind from 'solid-rewind';
+
+    render( () => {
+        <Re
+        <App />
+    }, document.getElementById('root'));
+
     `,1],
 
 
@@ -42,6 +65,17 @@ function RewindWrapper() {
         <Rew
         <App />
     }, document.getElementById('root'));
+
+    `,1],
+
+
+    [`import Rewind from 'solid-rewind';
+
+    render( () => {
+        <Rewi
+        <App />
+    }, document.getElementById('root'));
+
     `,1],
 
 
@@ -51,6 +85,47 @@ function RewindWrapper() {
         <Rewin
         <App />
     }, document.getElementById('root'));
+
+    `,1],
+
+
+    [`import Rewind from 'solid-rewind';
+
+    render( () => {
+        <Rewind
+        <App />
+    }, document.getElementById('root'));
+
+    `,1],
+
+
+    [`import Rewind from 'solid-rewind';
+
+    render( () => {
+        <Rewind>
+        <App />
+    }, document.getElementById('root'));
+
+    `,2],
+
+
+    [`import Rewind from 'solid-rewind';
+
+    render( () => {
+        <Rewind>
+          <App />
+    }, document.getElementById('root'));
+
+    `,2],
+
+
+    [`import Rewind from 'solid-rewind';
+
+    render( () => {
+        <Rewind>
+          <App />
+        <
+    }, document.getElementById('root'));
     `,1],
 
 
@@ -59,6 +134,7 @@ function RewindWrapper() {
     render( () => {
         <Rewind>
           <App />
+        </
     }, document.getElementById('root'));
     `,1],
 
@@ -69,7 +145,18 @@ function RewindWrapper() {
         <Rewind>
           <App />
         </R
-    }, document.getElementById('root'));`,1],
+    }, document.getElementById('root'));
+    `,1],
+
+
+    [`import Rewind from 'solid-rewind';
+
+    render( () => {
+        <Rewind>
+          <App />
+        </Re
+    }, document.getElementById('root'));
+    `,1],
 
 
     [`import Rewind from 'solid-rewind';
@@ -78,7 +165,18 @@ function RewindWrapper() {
         <Rewind>
           <App />
         </Rew
-    }, document.getElementById('root'));`,1],
+    }, document.getElementById('root'));
+    `,1],
+
+
+    [`import Rewind from 'solid-rewind';
+
+    render( () => {
+        <Rewind>
+          <App />
+        </Rewi
+    }, document.getElementById('root'));
+    `,1],
 
 
     [`import Rewind from 'solid-rewind';
@@ -87,7 +185,18 @@ function RewindWrapper() {
         <Rewind>
           <App />
         </Rewin
-    }, document.getElementById('root'));`,1],
+    }, document.getElementById('root'));
+    `,1],
+
+
+    [`import Rewind from 'solid-rewind';
+
+    render( () => {
+        <Rewind>
+          <App />
+        </Rewind
+    }, document.getElementById('root'));
+    `,1],
 
 
     [`import Rewind from 'solid-rewind';
@@ -96,7 +205,8 @@ function RewindWrapper() {
         <Rewind>
           <App />
         </Rewind>
-    }, document.getElementById('root'));`,18],
+    }, document.getElementById('root'));
+    `,18],
   ];
   
 
@@ -119,7 +229,7 @@ function RewindWrapper() {
 
 
   return (
-    <CodeMirror extensions={[basicSetup, python()]} theme={oneDark} showLineNumbers={true} readOnly={true} wrapLine={true} value={steps[rwCodeStage()][0]} />      
+    <CodeMirror id='rewindWrapper' extensions={[basicSetup, python()]} theme={oneDark} showLineNumbers={true} readOnly={true} wrapLine={true} value={steps[rwCodeStage()][0]} />      
   );
 }
 
