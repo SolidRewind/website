@@ -6,6 +6,13 @@ function Nav() {
     element && element.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
+  window.addEventListener('scroll', () => {
+    let y = 1 + (window.scrollY || window.pageYOffset)
+    y -= 500;
+    y = y < 0 ? 0 : y;
+    document.querySelector('.nav').style.backgroundColor = `rgba(0, 0, 0, ${y * 0.003})`;
+  })
+
   return (
     <nav class='nav'>
       {/* href='/#install' */}

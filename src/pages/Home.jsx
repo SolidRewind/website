@@ -3,6 +3,11 @@ import { Routes, Route } from '@solidjs/router'
 import { createSignal, getOwner } from 'solid-js';
 import logo from '../assets/solid-rewind-logo.svg';
 import screenshot from '../assets/screenshots/screenshot-1.png';
+import videoA from '../assets/video/video-a.mp4';
+import videoB from '../assets/video/video-b.mp4';
+import videoC from '../assets/video/video-c.mp4';
+import vidBox from '../assets/video/video-box.jpg'
+
 
 import RewindWrapper from '../components/RewindWrap'
 
@@ -17,7 +22,7 @@ import { oneDark } from "@codemirror/theme-one-dark";
 
 function Home() {
 
-  const [copyMesg, showCopyMesg] = createSignal(false)
+  const [currentVideo, setCurrentVideo] = createSignal(0)
 
   function copyNpm() {
     navigator.clipboard.writeText('npm i solid-rewind');
@@ -28,7 +33,6 @@ function Home() {
   function hideMesg() {
     document.getElementById('copyMesg').style.opacity = 0;
   }
-  
 
   return (
      <>
@@ -122,9 +126,14 @@ function Home() {
             Features
           </h3>
           <options class='bigLink'>
-            <a href=''>Time Travel</a><br></br>
-            <a href=''>Component Tree View</a><br></br>
-            <a href=''>????</a>
+            {(currentVideo() === 0) && <a href='' onMouseOver={()=>setCurrentVideo(0)} >• Time Travel</a>}
+            {(currentVideo() !== 0) && <a href='' onMouseOver={()=>setCurrentVideo(0)} >Time Travel</a>}
+            <br></br>
+            {(currentVideo() === 1) && <a href='' onMouseOver={()=>setCurrentVideo(1)} >• Component Tree View</a>}
+            {(currentVideo() !== 1) && <a href='' onMouseOver={()=>setCurrentVideo(1)} >Component Tree View</a>}
+            <br></br>
+            {(currentVideo() === 2) && <a href='' onMouseOver={()=>setCurrentVideo(2)} >• ????</a>}
+            {(currentVideo() !== 2) && <a href='' onMouseOver={()=>setCurrentVideo(2)} >????</a>}
           </options>
         </div>
 
@@ -132,7 +141,26 @@ function Home() {
           <figure class='fullbox aboutImage'>
             {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/kJQP7kiw5Fk?frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; allowfullscreen" ></iframe> */}
 
-            <img class='transparent' src={screenshot}></img>
+
+            {(currentVideo() === 0) && 
+              <video id="background-video" autoplay loop muted poster={vidBox}>
+                <source src={videoA} type="video/mp4"></source>
+              </video>
+            }
+            {(currentVideo() === 1) && 
+              <video id="background-video" autoplay loop muted poster={vidBox}>
+                <source src={videoB} type="video/mp4"></source>
+              </video>
+            }
+            {(currentVideo() === 2) && 
+              <video id="background-video" autoplay loop muted poster={vidBox}>
+                <source src={videoC} type="video/mp4"></source>
+              </video>
+            }
+
+{/* || <img class='transparent' src={vidBox}></img> */}
+
+            
           </figure>
         </div>
       </section>
