@@ -7,14 +7,6 @@ import { oneDark } from "@codemirror/theme-one-dark";
 
 function RewindWrapper() {
 
-  // const [rewindCode, setRewindCode] = createSignal(`import Rewind from 'solid-rewind';
-
-  // render( () => {
-  //     <Rewind>
-  //         <App />
-  //     </Rewind>
-  // }, document.getElementById('root'));`)
-
   const [rwCodeStage, setRwCodeStage] = createSignal(0);
 
   const steps = [
@@ -218,8 +210,6 @@ function RewindWrapper() {
       next = 0;
     }
     setRwCodeStage(next);
-
-    console.log(steps[rwCodeStage()][1]);
 
     setTimeout(advanceCode, steps[rwCodeStage()][1] * 100);
   }

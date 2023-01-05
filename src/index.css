@@ -251,7 +251,7 @@ button:hover {
   width: 27vw;
   align-self: start;
   margin-top: 2vw;
-  margin-bottom: 2vw;
+  /* margin-bottom: 2vw; */
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -304,5 +304,8 @@ button:hover {
 }
 
 #rewindWrapper {
+  margin-top: 2vw;
+}
+.instructionsSpacer {
   margin-top: 2vw;
 }

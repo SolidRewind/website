@@ -108,7 +108,7 @@ function Home() {
           <br></br><br></br><br></br><br></br>
           3. Use the Solid-Rewind Chrome Extension to debug your app.
           <br></br>
-          Download <a href='https://chrome.google.com/webstore/detail/solid-rewind/ejdinegdopmimnkbonknknhfmmcgcdoh' target='_blank'>here</a>.
+          👉&nbsp;&nbsp;Download <a href='https://chrome.google.com/webstore/detail/solid-rewind/ejdinegdopmimnkbonknknhfmmcgcdoh' target='_blank'>here</a>.
 
         </article>
 
@@ -130,6 +130,8 @@ function Home() {
 
         <div class='twoThird smallerPadding'>
           <figure class='fullbox aboutImage'>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kJQP7kiw5Fk?frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; allowfullscreen" ></iframe>
+
             <img class='transparent' src={screenshot}></img>
           </figure>
         </div>
