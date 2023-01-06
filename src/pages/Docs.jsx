@@ -8,7 +8,7 @@ function Docs() {
       <div>
         <div class="docMain">
           <nav class='sideNav'>
-            <h1>Getting Started</h1>
+            <h1>Getting Started!</h1>
             <ul class="docsUL">
               <li class = "docsNav"><a href='/docs/installation'>Installation</a></li>
               <li class = "docsNav"><a href='/docs/basicusage'>Basic Usage</a></li>
@@ -32,7 +32,7 @@ function Docs() {
             <h3>After you've installed Rewind, head over to <a href="">Basic Usage</a> to see how to use the tool.</h3> 
           </main>
         </div>
-        <footer class='docFooter'>
+        {/* <footer class='docFooter'>
           <div >
             <div>
               <h1>Getting Started</h1>
@@ -59,7 +59,7 @@ function Docs() {
               </ul>
             </div>
           </div>
-        </footer>
+        </footer> */}
       </div>
     </>
   );

@@ -1,21 +1,21 @@
 import { render } from 'solid-js/web';
 import { Routes, Route } from '@solidjs/router'
+import DocsNav from '../../components/DocsNav';
+import Nav from '../../components/Nav';
 
 function Installation() {
 
 
   return (
     <>
-      <div>
+      <Nav mode='docs' />
+      <DocsNav />
+      <div class='docsContent'>
+        
+      </div>
+      {/* <div>
         <div class="docMain">
-          <nav class='sideNav'>
-            <h1>Getting Started</h1>
-            <ul class="docsUL">
-              <li class = "docsNav"><a href='/docs/installation'>Installation</a></li>
-              <li class = "docsNav"><a href='/docs/basicusage'>Basic Usage</a></li>
-              <li class = "docsNav"><a href='/docs/coreconcepts'>Core Concepts</a></li>
-            </ul>
-          </nav>
+         
           <main class ="installationPage">
             <h1>Installation</h1>
             <h3 class = 'installationLink'>Solid Rewind is available as an <a href="https://www.npmjs.com/package/solid-rewind">npm package</a></h3> 
@@ -51,7 +51,7 @@ function Installation() {
           </div>
       </footer>
         
-      </div>
+      </div> */}
       
     </>
   );

@@ -1,19 +1,15 @@
 import { Routes, Route } from '@solidjs/router'
 
-import Docs from './pages/Docs';
 import Home from './pages/Home';
 import Installation from './pages/DocsPages/Installation'
 import Basicusage from './pages/DocsPages/BasicUsage';
 import Coreconcepts from './pages/DocsPages/CoreConcepts';
 import Todo from './Todo';
-import Nav from './components/Nav';
 
 function App() {
   return (
-    <>
-    <Nav />
-
     <div >
+
       <Routes>
         <Route path="/" component={Home} />
         <Route path="/docs" component={Installation}/>
@@ -24,7 +20,6 @@ function App() {
       </Routes>
       
     </div>
-    </>
   );
 }
 

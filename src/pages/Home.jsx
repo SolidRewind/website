@@ -19,6 +19,8 @@ import { basicSetup } from "codemirror";
 import { python } from "@codemirror/lang-python";
 import { oneDark } from "@codemirror/theme-one-dark";
 
+import Nav from '../components/Nav';
+
 
 function Home() {
 
@@ -36,6 +38,8 @@ function Home() {
 
   return (
      <>
+
+      <Nav />
       <header id='hero'>
 
         <div id='heroContent'>
