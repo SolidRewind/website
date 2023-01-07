@@ -4,7 +4,6 @@ import Home from './pages/Home';
 import Installation from './pages/DocsPages/Installation'
 import Basicusage from './pages/DocsPages/BasicUsage';
 import Coreconcepts from './pages/DocsPages/CoreConcepts';
-import Todo from './Todo';
 import Demo from './demo/Demo'
 
 function App() {
@@ -18,8 +17,7 @@ function App() {
         <Route path="/" component={Home} />
         <Route path="/docs" component={Installation}/>
           <Route path="/docs/installation" component={Installation} /> 
-          <Route path="/demo" component={Todo} />
-          <Route path="/demo2" component={Demo} />
+          <Route path="/demo" component={Demo} />
         <Route path="/docs/basicusage" component={Basicusage} /> 
         <Route path="/docs/coreconcepts" component={Coreconcepts} /> 
       </Routes>

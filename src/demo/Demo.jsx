@@ -17,6 +17,7 @@ const Todo = () => {
     [nanoid(8)] : "Download Chrome Extension",
     [nanoid(8)] : "Start debugging!"
   });
+  const [numWindows, setNumWindows] = createSignal(0);
   const [windows, setWindows] = createSignal({
     // [nanoid(8)] :<DragableWindow id='dragWin1' x={400} y={90}><WindowBox winNum='1' deleteWin={deleteWin} /></DragableWindow>,
     // [nanoid(8)] :<DragableWindow id='dragWin2' x={450} y={140}><WindowBox winNum='2' deleteWin={deleteWin} /></DragableWindow>,
@@ -68,9 +69,7 @@ const Todo = () => {
     const length = Object.keys(windows()).length;
     const x = 400 + 50 * length;
     const y = 400 + 50 * length;
-    newWinList [ winID ] = <WindowBox winID={winID} deleteWin={deleteWin} />
-    //</DragableWindow>,
-    //<DragableWindow id={'win_' + winID} x={x} y={y}> 
+    newWinList [ winID ] = [x, y];
     setWindows(newWinList);
   }
 
@@ -100,7 +99,11 @@ const Todo = () => {
       </DragableWindow>
   
       <For each={Object.keys(windows())}>{(winkey, i) =>
-        windows()[winkey]
+      
+        <DragableWindow id={'win_' + winkey} x={windows()[winkey][0]} y={windows()[winkey][1]}>
+          <WindowBox winID={winkey} deleteWin={deleteWin} />
+        </DragableWindow>
+        
       }</For>
 
     </>
