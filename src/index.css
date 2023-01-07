@@ -333,3 +333,54 @@ button:hover {
   width: 73vw;
   background-color: white;
 }
+
+
+/* DEMO */
+.dragWindow {
+  position: absolute;
+  top: 300;
+  left: 300;
+}
+
+.dragWindow:hover {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.dragWindow:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.dragBoxIcon {
+  width: 30px;
+  padding-top: 6px;
+  margin: -19px auto 14px auto;
+}
+
+.dragBarLine {
+  height: 6px;
+  border-top: 1px solid rgb(190, 189, 186);
+}
+
+.dragBarLineBottom {
+  height: 7px !important;
+  border-bottom: 1px solid rgb(190, 189, 186);
+}
+
+#demoBackNav {
+  display: flex;
+  position: absolute;
+  border-top: 2px solid white;
+  background-color: black;
+  border-bottom: 2px solid white;
+  width: 100vw;
+  top: 0;
+  padding: 2px 4vw 4px 4vw;
+}
+
+#demoBackNav .navItem {
+  text-align: left;
+}
