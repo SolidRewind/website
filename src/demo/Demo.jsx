@@ -85,23 +85,13 @@ const Todo = () => {
         <WinMaker newWin={newWin} />
       </DragableWindow>
   
-      {/* <For each={Object.keys(windows())}>{(winkey, i) =>
+      <For each={Object.keys(windows())}>{(winkey, i) =>
 
         <DragableWindow id={'win_' + winkey} x={windows()[winkey][0]} y={windows()[winkey][1]}>
           <WindowBox winID={winkey} deleteWin={deleteWin} />
         </DragableWindow>
         
-      }</For> */}
-
-
-      {Object.keys(windows()).map((winkey) => (
-
-          <DragableWindow id={'win_' + winkey} x={windows()[winkey][0]} y={windows()[winkey][1]}>
-             <WindowBox winID={winkey} deleteWin={deleteWin} />
-          </DragableWindow>
-
-      ))}
-
+      }</For>
 
     </>
   );
