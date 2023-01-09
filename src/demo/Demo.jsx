@@ -28,25 +28,12 @@ const Todo = () => {
     // do nothing if task is empty
     if (task() === '') return;
 
-    // if ID is provided, then update the task rather than creating a new one
-    // if (id) {
-    //   setTasks(tasks().filter((task) => task.id !== id()))
-    //   setTasks([...tasks(), { id: id(), task: task() }]);
-    // }
-    // // add tasks
-    // else {
-    //   setTasks([...tasks(), { id: nanoid(8), task: task() }]);
-    // }
-
     // get task list
     const newTaskList = Object.assign({}, taskList());
     // add new task
     newTaskList[ nanoid(8) ] = task();
     // update task list
     setTaskList(newTaskList);
-
-    console.log(newTaskList, 'NTL');
-
     // clear submit text
     setTask('');
   } 
@@ -67,8 +54,8 @@ const Todo = () => {
     const newWinList = Object.assign({}, windows());
     const winID = nanoid(8);
     const length = Object.keys(windows()).length;
-    const x = 400 + 50 * length;
-    const y = 400 + 50 * length;
+    const x = 600 + 35 * length;
+    const y = 350 + 50 * length;
     newWinList [ winID ] = [x, y];
     setWindows(newWinList);
   }
@@ -98,13 +85,23 @@ const Todo = () => {
         <WinMaker newWin={newWin} />
       </DragableWindow>
   
-      <For each={Object.keys(windows())}>{(winkey, i) =>
-      
+      {/* <For each={Object.keys(windows())}>{(winkey, i) =>
+
         <DragableWindow id={'win_' + winkey} x={windows()[winkey][0]} y={windows()[winkey][1]}>
           <WindowBox winID={winkey} deleteWin={deleteWin} />
         </DragableWindow>
         
-      }</For>
+      }</For> */}
+
+
+      {Object.keys(windows()).map((winkey) => (
+
+          <DragableWindow id={'win_' + winkey} x={windows()[winkey][0]} y={windows()[winkey][1]}>
+             <WindowBox winID={winkey} deleteWin={deleteWin} />
+          </DragableWindow>
+
+      ))}
+
 
     </>
   );

@@ -13,8 +13,6 @@ function DragableWindow(props) {
     dragObj.style.top = y + "px";
   }
 
-  
-
   const startDrag = () => {
     // clear event listeners if they are still somehow there.
     if (mouseListeners()) removeListeners();
@@ -38,7 +36,9 @@ function DragableWindow(props) {
 
   const handleMouseUp = (e) => {
     const dragObj = document.querySelector('#'+ props.id);
-    setWinPos([dragObj.offsetLeft, dragObj.offsetTop]);
+    if (winPos()[0] !== dragObj.offsetLeft && winPos()[1] !== dragObj.offsetTop) {
+      setWinPos([dragObj.offsetLeft, dragObj.offsetTop]);
+    }
     removeListeners();
   }
 
@@ -48,7 +48,6 @@ function DragableWindow(props) {
   });
 
   onMount(async () => {
-    console.log(props);
     setPos(winPos()[0], winPos()[1]);
   });
 
