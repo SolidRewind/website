@@ -25,6 +25,6 @@
     "@solid-codemirror/codemirror": "^1.0.4",
     "codemirror": "^6.0.1",
     "solid-codemirror": "^2.2.1",
-    "solid-rewind": "^0.0.508"
+    "solid-rewind": "^0.0.510"
   }
 }

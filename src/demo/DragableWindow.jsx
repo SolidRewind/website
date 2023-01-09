@@ -13,7 +13,10 @@ function DragableWindow(props) {
     dragObj.style.top = y + "px";
   }
 
-  const startDrag = () => {
+  const startDrag = (event) => {
+    // dont start drag on right click
+    if (event.ctrlKey || event.which !== 1) return;
+
     // clear event listeners if they are still somehow there.
     if (mouseListeners()) removeListeners();
 
