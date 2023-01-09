@@ -16,8 +16,8 @@ function App() {
       <Routes>
         <Route path="/" component={Home} />
         <Route path="/docs" component={Installation}/>
-          <Route path="/docs/installation" component={Installation} /> 
-          <Route path="/demo" component={Demo} />
+        <Route path="/docs/installation" component={Installation} /> 
+        <Route path="/demo" component={Demo} />
         <Route path="/docs/basicusage" component={Basicusage} /> 
         <Route path="/docs/coreconcepts" component={Coreconcepts} /> 
       </Routes>

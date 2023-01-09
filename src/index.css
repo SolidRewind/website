@@ -263,6 +263,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   position: relative;
+  cursor: pointer;
 }
 #copyIcon {
   background-image: url('./assets/icons/copy.png');
@@ -309,6 +310,7 @@ button:hover {
 
 #copyWindow:hover #copyIcon {
     opacity: 80%; 
+    cursor: pointer;
 }
 
 #rewindWrapper {
