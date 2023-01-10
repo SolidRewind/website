@@ -7,7 +7,7 @@ import '../style/todo-style.css';
 import WindowBox from './WindowBox';
 import WinMaker from './WinMaker';
 
-const Todo = () => {
+const Demo = () => {
 
   const [id, setId] = createSignal("");
   const [task, setTask] = createSignal("");
@@ -69,7 +69,16 @@ const Todo = () => {
 
   return (
     <div class='demoBG'>
-      <nav id='demoBackNav'>
+
+      <notice id='demoMobilePopupParent'>
+        <div id='demoMobilePopup'>
+          Solid Reqind Demo only availible on desktop.
+
+          <a href='/'>👈&nbsp;&nbsp;back</a>
+        </div>
+      </notice>
+
+      <nav class='nav backNav'>
         <div class='navItem'><a href='/'>back</a></div>
       </nav>
 
@@ -97,4 +106,4 @@ const Todo = () => {
   );
 };
 
-export default Todo;
+export default Demo;

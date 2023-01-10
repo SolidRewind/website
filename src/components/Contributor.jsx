@@ -4,8 +4,8 @@ function Contributor(props) {
     <nav class='teamMember'>
         <img class='portrait' src={props.portrait}></img>
         { props.name }
-        <a href={ props.linkedIn } class='teamLink'>LinkedIn</a>
-        <a href={ props.gitHub } class='teamLink'>GitHub</a>
+        <a href={ props.linkedIn } target='_blank' class='teamLink'>LinkedIn</a>
+        <a href={ props.gitHub } target='_blank' class='teamLink'>GitHub</a>
     </nav>
   );
 }
