@@ -2,7 +2,7 @@ import { Routes, Route } from '@solidjs/router'
 
 import Home from './pages/Home';
 import Installation from './pages/DocsPages/Installation'
-import Basicusage from './pages/DocsPages/BasicUsage';
+import Basicusage from './pages/DocsPages/Basicusage';
 import Coreconcepts from './pages/DocsPages/CoreConcepts';
 import Demo from './demo/Demo'
 
