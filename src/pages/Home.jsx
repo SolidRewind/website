@@ -7,6 +7,10 @@ import videoA from '../assets/video/video-a.mp4';
 import videoB from '../assets/video/video-b.mp4';
 import videoC from '../assets/video/video-c.mp4';
 import vidBox from '../assets/video/video-box.jpg'
+import christian from '../assets/contributors/Christian.jpeg';
+import robbie from '../assets/contributors/Robbie.jpeg';
+import willem from '../assets/contributors/Willem.jpeg';
+import json from '../assets/contributors/Jason.jpeg';
 
 
 import RewindWrapper from '../components/RewindWrap'
@@ -20,6 +24,7 @@ import { python } from "@codemirror/lang-python";
 import { oneDark } from "@codemirror/theme-one-dark";
 
 import Nav from '../components/Nav';
+import Contributor from '../components/Contributor';
 
 
 function Home() {
@@ -114,7 +119,7 @@ function Home() {
 
           <br></br><br></br><br></br><br></br>
           Use the Solid-Rewind Chrome Extension to debug your app.
-          <br></br>
+          <br></br><br></br>
           👉&nbsp;&nbsp;Download <a href='https://chrome.google.com/webstore/detail/solid-rewind/ejdinegdopmimnkbonknknhfmmcgcdoh' target='_blank'>here</a>.
 
         </article>
@@ -176,18 +181,28 @@ function Home() {
           <h3>
             The Team
           </h3>
-          <p>
+          {/* <p>
             Christian Catanese  <a href='' class='teamLink'>LinkedIn</a>  <a href='' class='teamLink'>GitHub</a><br></br>
             Robbie Gottlieb  <a href='' class='teamLink'>LinkedIn</a>  <a href='' class='teamLink'>GitHub</a><br></br>
             Willem Rosenthal  <a href='' class='teamLink'>LinkedIn</a>  <a href='' class='teamLink'>GitHub</a><br></br>
             Jason Moon  <a href='' class='teamLink'>LinkedIn</a>  <a href='' class='teamLink'>GitHub</a>
-          </p>
+          </p> */}
+          <div id='team'>
+            <Contributor name='Christian Catanese' portrait={christian} />
+            <Contributor name='Robbie Gottlieb' portrait={robbie} />
+            <Contributor name='Willem Rosenthal' portrait={willem} />
+            <Contributor name='Jason Moon' portrait={json} />
+          </div>
           <br></br><br></br><br></br>
       </section>
 
 
       
+      <footer id='footer' class='nav'>
+          <div>© 2023</div>    <div>Read about us on <a>Median</a> - Follow on <a>GitHub</a></div>
+      </footer>
      </>
+
   );
 }
 

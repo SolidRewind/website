@@ -392,6 +392,36 @@ button:hover {
   text-align: left;
 }
 
+#team {
+  display: flex;
+  justify-content: space-between;
+}
+.teamMember {
+  display: flex;
+  flex-direction: column;
+  max-width: 20vw;
+}
+.teamMember a {
+  margin-left: 0;
+}
+.portrait {
+  width: 20vw;
+  /* -webkit-filter: grayscale(70%); 
+  filter: grayscale(70%); */
+  margin-bottom: 1vw;
+}
+
+#footer {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  position: relative !important;
+  display: flex;
+  justify-content: space-between;
+}
+
 @media only screen and (max-width: 600px) {
   body {
     background-color: lightblue;
@@ -408,5 +438,25 @@ button:hover {
   }
   .mobleNoPaddingBottom {
     padding-bottom: 0;
+  }
+
+  #hero {
+    height: 75vw;
+    display: flex;
+  }
+  
+  #hero .logo {
+    width: 11vw;
+    margin-bottom: 4.25vw;
+  }
+  
+  #heroTitle {
+    font-weight: 700;
+    font-size: 12vw;
+    line-height: 9vw;
+  }
+
+  #rewindBehind {
+    -webkit-text-stroke-width: 2px;
   }
 }

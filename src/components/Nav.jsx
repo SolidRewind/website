@@ -1,10 +1,15 @@
 
 function Nav(props) {
   
-  function scrollToId(target) {
+  function scrollToId(target, start = 0) {
     let element = document.getElementById(target);
-    element && element.scrollIntoView({ behavior: "smooth", block: "start" });
+    let diff = (element.offsetTop - window.scrollY);
+    let scrollTo = start + diff * 0.05;
+    window.scroll(0, scrollTo);
+    if (diff > 10) setTimeout(scrollToId, 0 ,target, scrollTo);
+    // element && element.scrollIntoView({ behavior: "smooth", block: "start" });
   }
+  
 
   window.addEventListener('scroll', () => {
     let y = 1 + (window.scrollY || window.pageYOffset)
@@ -20,10 +25,11 @@ function Nav(props) {
         { (props.mode!=='docs') && <div class='navItem leftNavItem'><a onclick={()=>scrollToId('install')} >Get Started</a></div> }
         { (props.mode==='docs') && <div class='navItem leftNavItem'><a href="/" >Solid Rewind</a></div> }
         <div class='navSpacer'></div>
+        <div class='navItem'><a onclick={()=>scrollToId('team')} >Team</a></div>
         <div class='navItem'><a href='/demo'>Demo</a></div>
         {/* <div class='navItem'><a href='/docs/installation'>Docs</a></div> */}
-        <div class='navItem'><a href='https://www.solidjs.com/blog/introducing-solidstart'>Blog</a></div>
         <div class='navItem'><a href='https://github.com/oslabs-beta/solid-rewind'>Github</a></div>
+        <div class='navItem'><a href='https://www.solidjs.com/blog/introducing-solidstart'>Medium Artcile</a></div>
       </nav>
     </nav>
   );
