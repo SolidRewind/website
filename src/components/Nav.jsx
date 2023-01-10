@@ -31,7 +31,7 @@ function Nav(props) {
         <div class='navItem'><a href='/demo'>Demo</a></div>
         {/* <div class='navItem'><a href='/docs/installation'>Docs</a></div> */}
         <div class='navItem'><a href='https://github.com/oslabs-beta/solid-rewind' target='_blank'>Github</a></div>
-        <div class='navItem'><a href='https://www.solidjs.com/blog/introducing-solidstart' target='_blank'>Medium Artcile</a></div>
+        <div class='navItem'><a href='https://www.solidjs.com/blog/introducing-solidstart' target='_blank'>Medium Article</a></div>
       </nav>
     </nav>
   );
