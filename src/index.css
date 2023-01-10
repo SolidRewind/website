@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Syne:wght@600;700;800&display=swap');
 
 body {
-  background-color: #2ad4d9;
+  background-color: black;
   background-image: url('./assets/gradiant-1.jpg');
+  background-size:100% 100%;
 }
 
 h3 {
@@ -257,6 +258,7 @@ button:hover {
   border-radius: 4px;
   padding: 2vw 2vw 2vw 2vw;
   width: 27vw;
+  min-width: 255px;
   align-self: start;
   margin-top: 2vw;
   /* margin-bottom: 2vw; */
@@ -318,6 +320,10 @@ button:hover {
 }
 .instructionsSpacer {
   margin-top: 2vw;
+}
+
+.installInstructions {
+  margin-top: 100px;
 }
 
 /* DOCS */
@@ -385,4 +391,20 @@ button:hover {
 
 #demoBackNav .navItem {
   text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .mobileExpand {
+    width: 100vw;
+  }
+  .columnOnMobile {
+    flex-direction: column;
+  }
+  .installInstructions {
+    margin-top: 0 !important;
+    padding-top: 2vw;
+  }
 }
