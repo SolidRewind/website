@@ -123,8 +123,8 @@ function Home() {
 
 
       {/* FEATURES */}
-      <section class='contentSection noPadding'>
-        <div class='oneThird rightBorder smallerPadding'>
+      <section class='contentSection noPadding columnOnMobile'>
+        <div class='oneThird rightBorder smallerPadding mobileExpand mobleNoPaddingBottom'>
           <h3>
             Features
           </h3>
@@ -134,13 +134,13 @@ function Home() {
             <br></br>
             {(currentVideo() === 1) && <a href='' onMouseOver={()=>setCurrentVideo(1)} >• Component Tree View</a>}
             {(currentVideo() !== 1) && <a href='' onMouseOver={()=>setCurrentVideo(1)} >Component Tree View</a>}
-            <br></br>
+            {/* <br></br>
             {(currentVideo() === 2) && <a href='' onMouseOver={()=>setCurrentVideo(2)} >• ????</a>}
-            {(currentVideo() !== 2) && <a href='' onMouseOver={()=>setCurrentVideo(2)} >????</a>}
+            {(currentVideo() !== 2) && <a href='' onMouseOver={()=>setCurrentVideo(2)} >????</a>} */}
           </options>
         </div>
 
-        <div class='twoThird smallerPadding'>
+        <div class='twoThird smallerPadding mobileExpand'>
           <figure class='fullbox aboutImage'>
             {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/kJQP7kiw5Fk?frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; allowfullscreen" ></iframe> */}
 
