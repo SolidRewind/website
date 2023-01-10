@@ -407,4 +407,7 @@ button:hover {
     margin-top: 0 !important;
     padding-top: 2vw;
   }
+  .mobleNoPaddingBottom {
+    padding-bottom: 0;
+  }
 }
