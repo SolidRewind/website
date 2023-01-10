@@ -12,7 +12,8 @@ import robbie from '../assets/contributors/Robbie.jpeg';
 import willem from '../assets/contributors/Willem.jpeg';
 import json from '../assets/contributors/Jason.jpeg';
 
-
+import vidTimeTravelTopBox from '../assets/video/time-travel-new-box.jpg';
+import vidTimeTravelTop from '../assets/video/time-travel-new.mp4';
 import vidTimeTravel from '../assets/video/time-travel2.mp4';
 import vidTreeView from '../assets/video/tree-view.mp4';
 
@@ -89,7 +90,11 @@ function Home() {
 
         <div class='twoThird mobileExpand'>
           <figure class='fullbox aboutImage'>
-            <img class='transparent' src={screenshot}></img>
+            
+            <video id="background-video" autoplay loop muted poster={vidTimeTravelTopBox}>
+              <source src={vidTimeTravelTop} type="video/mp4"></source>
+            </video>
+            {/* <img class='transparent' src={screenshot}></img> */}
           </figure>
         </div>
         
