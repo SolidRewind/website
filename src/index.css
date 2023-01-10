@@ -4,6 +4,11 @@
 
 body {
   background-color: black;
+}
+
+.demoBG {
+  width: 100vw;
+  height: 100vh;
   background-image: url('./assets/gradiant-1.jpg');
 }
 
@@ -69,8 +74,8 @@ a {
   font-family: 'Gruppo', cursive;
   cursor: pointer;
   position: fixed;
-  top: 0vw;
-  right: 4vw;
+  top: -8px;
+  right: 3.75vw;
   font-size: 40px;
 }
 
@@ -80,7 +85,7 @@ a {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   background-color: black;
   z-index: 20000;
   font-family: 'Syne', sans-serif;
