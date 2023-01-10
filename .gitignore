@@ -4,3 +4,4 @@ package-lock.json
 .env
 rewind-chrome-tool/dist/
 **/.DS_Store
+dist
