@@ -13,9 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with: 'node16'
-      - uses: actions/setup-node@v2
-        with: 'node16'
+      - uses: actions/setup-node@v3
       - name: install dependencies
         run: npm install
       - name: build website
