@@ -121,7 +121,8 @@ function Home() {
           Use the Solid-Rewind Chrome Extension to debug your app.
           <br></br><br></br>
           👉&nbsp;&nbsp;Download <a href='https://chrome.google.com/webstore/detail/solid-rewind/ejdinegdopmimnkbonknknhfmmcgcdoh' target='_blank'>here</a>.
-
+          <br></br><br></br>
+          Learn more about <a href='http://www.solidjs.com' target='_blank'>SolidJS</a>
         </article>
 
       </section>
@@ -176,7 +177,7 @@ function Home() {
 
 
 
-      <section class='contentSection smallerPadding oneWhole'>
+      <section class='contentSection smallerPadding oneWhole' id='team'>
 
           <h3>
             The Team
@@ -187,7 +188,7 @@ function Home() {
             Willem Rosenthal  <a href='' class='teamLink'>LinkedIn</a>  <a href='' class='teamLink'>GitHub</a><br></br>
             Jason Moon  <a href='' class='teamLink'>LinkedIn</a>  <a href='' class='teamLink'>GitHub</a>
           </p> */}
-          <div id='team'>
+          <div class='team'>
             <Contributor name='Christian Catanese' portrait={christian} />
             <Contributor name='Robbie Gottlieb' portrait={robbie} />
             <Contributor name='Willem Rosenthal' portrait={willem} />

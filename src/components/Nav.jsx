@@ -6,6 +6,8 @@ function Nav(props) {
     let diff = (element.offsetTop - window.scrollY);
     let scrollTo = start + diff * 0.05;
     window.scroll(0, scrollTo);
+    // var limit = window.height - window.innerHeight;
+    // console.log(window.outerHeight, window.screen.height);
     if (diff > 10) setTimeout(scrollToId, 0 ,target, scrollTo);
     // element && element.scrollIntoView({ behavior: "smooth", block: "start" });
   }
@@ -28,8 +30,8 @@ function Nav(props) {
         <div class='navItem'><a onclick={()=>scrollToId('team')} >Team</a></div>
         <div class='navItem'><a href='/demo'>Demo</a></div>
         {/* <div class='navItem'><a href='/docs/installation'>Docs</a></div> */}
-        <div class='navItem'><a href='https://github.com/oslabs-beta/solid-rewind'>Github</a></div>
-        <div class='navItem'><a href='https://www.solidjs.com/blog/introducing-solidstart'>Medium Artcile</a></div>
+        <div class='navItem'><a href='https://github.com/oslabs-beta/solid-rewind' target='_blank'>Github</a></div>
+        <div class='navItem'><a href='https://www.solidjs.com/blog/introducing-solidstart' target='_blank'>Medium Artcile</a></div>
       </nav>
     </nav>
   );

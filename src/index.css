@@ -392,7 +392,7 @@ button:hover {
   text-align: left;
 }
 
-#team {
+.team {
   display: flex;
   justify-content: space-between;
 }
