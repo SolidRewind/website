@@ -13,6 +13,10 @@ import willem from '../assets/contributors/Willem.jpeg';
 import json from '../assets/contributors/Jason.jpeg';
 
 
+import vidTimeTravel from '../assets/video/time-travel2.mp4';
+import vidTreeView from '../assets/video/tree-view.mp4';
+
+
 import RewindWrapper from '../components/RewindWrap'
 
 // import { createCodeMirror } from 'solid-codemirror';
@@ -153,19 +157,19 @@ function Home() {
 
             {(currentVideo() === 0) && 
               <video id="background-video" autoplay loop muted poster={vidBox}>
-                <source src={videoA} type="video/mp4"></source>
+                <source src={vidTimeTravel} type="video/mp4"></source>
               </video>
             }
             {(currentVideo() === 1) && 
               <video id="background-video" autoplay loop muted poster={vidBox}>
-                <source src={videoB} type="video/mp4"></source>
+                <source src={vidTreeView} type="video/mp4"></source>
               </video>
             }
-            {(currentVideo() === 2) && 
+            {/* {(currentVideo() === 2) && 
               <video id="background-video" autoplay loop muted poster={vidBox}>
                 <source src={videoC} type="video/mp4"></source>
               </video>
-            }
+            } */}
 
 {/* || <img class='transparent' src={vidBox}></img> */}
 
