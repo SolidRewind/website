@@ -64,8 +64,8 @@ function Home() {
       </header>
 
       {/* INTRO */}
-      <section class='contentSection'>
-        <div class='oneThird'>
+      <section class='contentSection columnOnMobile'>
+        <div class='oneThird mobileExpand'>
           <h3>
             Intro
           </h3>
@@ -78,7 +78,7 @@ function Home() {
           {/* <button>GET STARTED</button> */}
         </div>
 
-        <div class='twoThird'>
+        <div class='twoThird mobileExpand'>
           <figure class='fullbox aboutImage'>
             <img class='transparent' src={screenshot}></img>
           </figure>
@@ -88,15 +88,14 @@ function Home() {
 
 
       {/* INSTALLATION */}
-      <section class='contentSection noPadding' id='install'>
-        <div class='oneHalf smallerPadding'>
+      <section class='contentSection noPadding columnOnMobile' id='install'>
+        <div class='oneHalf smallerPadding mobileExpand'>
           <h3>
             easy to install
           </h3>
         </div>
       
-        <article class='oneHalf smallerPadding'>
-          <br></br><br></br><br></br>
+        <article class='oneHalf smallerPadding mobileExpand installInstructions'>
           Install the npm package
           <div class='flex'>
             <div id='copyWindow' onclick={ copyNpm }>
