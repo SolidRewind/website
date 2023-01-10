@@ -1,6 +1,9 @@
+import { createSignal } from "solid-js";
 
 function Nav(props) {
   
+  const [showMobileNav, setShowMobileNav] = createSignal(false);
+
   function scrollToId(target, start = 0) {
     let element = document.getElementById(target);
     let diff = (element.offsetTop - window.scrollY);
@@ -24,16 +27,36 @@ function Nav(props) {
 
   return (
     <nav class={(props.mode==='docs' && 'docsTopNav')}>
+      {showMobileNav() &&
+        <nav class="mobileMenu">
+            <div id="mobileMenuCloseBtn" onclick={() => setShowMobileNav(false)} >X</div>
+            <div class='navItem'><a onclick={()=> {scrollToId('install', window.scrollY); setShowMobileNav(false)}} >Get Started</a></div>
+            <div class='navItem'><a onclick={()=> {scrollToId('team', window.scrollY); setShowMobileNav(false)}} >Team</a></div>
+            <div class='navItem'><a href='/demo'>Demo</a></div>
+            {/* <div class='navItem'><a href='/docs/installation'>Docs</a></div> */}
+            <div class='navItem'><a href='https://github.com/oslabs-beta/solid-rewind' target='_blank'>Github</a></div>
+            <div class='navItem'><a href='https://www.solidjs.com/blog/introducing-solidstart' target='_blank'>Medium Article</a></div>
+        </nav>
+      }
       <nav class='nav'>
         {/* href='/#install' */}
         { (props.mode!=='docs') && <div class='navItem leftNavItem'><a onclick={()=>scrollToId('install', window.scrollY)} >Get Started</a></div> }
         { (props.mode==='docs') && <div class='navItem leftNavItem'><a href="/" >Solid Rewind</a></div> }
         <div class='navSpacer'></div>
-        <div class='navItem'><a onclick={()=>scrollToId('team', window.scrollY)} >Team</a></div>
-        <div class='navItem'><a href='/demo'>Demo</a></div>
-        {/* <div class='navItem'><a href='/docs/installation'>Docs</a></div> */}
-        <div class='navItem'><a href='https://github.com/oslabs-beta/solid-rewind' target='_blank'>Github</a></div>
-        <div class='navItem'><a href='https://www.solidjs.com/blog/introducing-solidstart' target='_blank'>Medium Article</a></div>
+        <div class='navRightMenu'>
+          <div class='navItem'><a onclick={()=>scrollToId('team', window.scrollY)} >Team</a></div>
+          <div class='navItem'><a href='/demo'>Demo</a></div>
+          {/* <div class='navItem'><a href='/docs/installation'>Docs</a></div> */}
+          <div class='navItem'><a href='https://github.com/oslabs-beta/solid-rewind' target='_blank'>Github</a></div>
+          <div class='navItem'><a href='https://www.solidjs.com/blog/introducing-solidstart' target='_blank'>Medium Article</a></div>
+        </div>
+        <div class="showOnMobile mobileMenuOpenBtn" onclick={() => setShowMobileNav(true)} >
+          <svg viewBox="0 0 100 80" width="33" height="36">
+            <rect width="100" height="7" style="fill:rgb(255,255,255);"></rect>
+            <rect y="27" width="100" height="7" style="fill:rgb(255,255,255);"></rect>
+            <rect y="54" width="100" height="7" style="fill:rgb(255,255,255);"></rect>
+          </svg>
+        </div>
       </nav>
     </nav>
   );

@@ -122,7 +122,7 @@ function Home() {
           <br></br><br></br>
           👉&nbsp;&nbsp;Download <a href='https://chrome.google.com/webstore/detail/solid-rewind/ejdinegdopmimnkbonknknhfmmcgcdoh' target='_blank'>here</a>.
           <br></br><br></br>
-          Learn more about <a href='http://www.solidjs.com' target='_blank'>SolidJS</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Learn more about <a href='http://www.solidjs.com' target='_blank'>SolidJS</a>
         </article>
 
       </section>

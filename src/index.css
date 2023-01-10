@@ -1,5 +1,6 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Syne:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 
 body {
   background-color: black;
@@ -52,6 +53,50 @@ a {
   text-align: right;
 }
 
+.navRightMenu {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 4;
+}
+
+.mobileMenuOpenBtn {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+#mobileMenuCloseBtn {
+  font-family: 'Gruppo', cursive;
+  cursor: pointer;
+  position: fixed;
+  top: 0vw;
+  right: 4vw;
+  font-size: 40px;
+}
+
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 20000;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 10pt;
+  color: white;
+  text-transform: uppercase;
+  flex-direction: column;
+  align-items: center;
+  padding: 40vw 0;
+}
+
+.showOnMobile {
+  display: none;
+}
+
 .navItem a {
   font-family: 'Syne', sans-serif;
   font-weight: 600;
@@ -93,7 +138,7 @@ a {
 }
 
 #hero .logo {
-  width: 8.5vw;
+  width: 10vw;
   margin-bottom: 4.25vw;
 }
 
@@ -422,6 +467,10 @@ button:hover {
   justify-content: space-between;
 }
 
+#footer a {
+  color: #ffc740;
+}
+
 @media only screen and (max-width: 600px) {
   body {
     background-color: lightblue;
@@ -438,6 +487,21 @@ button:hover {
   }
   .mobleNoPaddingBottom {
     padding-bottom: 0;
+  }
+
+  .navRightMenu {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: flex;
+  }
+  .showOnMobile {
+    display: block;
+  }
+
+  .rightBorder {
+    border-right: none;
   }
 
   #hero {
