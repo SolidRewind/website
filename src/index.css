@@ -95,7 +95,7 @@ a {
   text-transform: uppercase;
   flex-direction: column;
   align-items: center;
-  padding: 40vw 0;
+  padding: 25vh 0 45vh;
 }
 
 .showOnMobile {
