@@ -4,6 +4,8 @@
 
 body {
   background-color: black;
+  font-family: 'Inter', sans-serif;
+  font-size: 13pt;
 }
 
 .demoBG {
