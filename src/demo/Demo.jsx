@@ -93,15 +93,15 @@ const Demo = () => {
         </notice>
 
       
-        <DragableWindow id='taskAdder' x={70} y={85}>
+        <DragableWindow id='taskAdder' x={35} y={85}>
           <TaskAdder task={task} submitTask={submitTask} setTask={setTask}  />
         </DragableWindow>
 
-        <DragableWindow id='taskList' x={70} y={350}>
+        <DragableWindow id='taskList' x={35} y={350}>
           <TaskList taskList={taskList} deleteTask={deleteTask} />  
         </DragableWindow>
 
-        <DragableWindow id='winMaker' x={400} y={90}>
+        <DragableWindow id='winMaker' x={350} y={85}>
           <WinMaker newWin={newWin} />
         </DragableWindow>
     
