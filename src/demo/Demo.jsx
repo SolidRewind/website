@@ -81,7 +81,7 @@ const Demo = () => {
       <div class='demoBG'>
 
         <nav class='nav backNav'>
-          <div class='navItem'><a href='/'>return&nbsp;&nbsp;to&nbsp;&nbsp;homepage</a></div>
+          <div class='navItem'><a href='/'>&#x3c; &nbsp;&nbsp;return&nbsp;&nbsp;to&nbsp;&nbsp;homepage</a></div>
         </nav>
 
         <notice id='demoMobilePopupParent'>
