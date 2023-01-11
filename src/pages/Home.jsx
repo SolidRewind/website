@@ -209,7 +209,7 @@ function Home() {
 
       
       <footer id='footer' class='nav'>
-          <div>© 2023</div>    <div>Read about us on <a>Median</a> - Follow on <a>GitHub</a></div>
+          <div>© 2023</div>    <div>Read about us on <a href='' target='_blank'>Medium</a> - Follow on <a href='' target='_blank'>GitHub</a></div>
       </footer>
      </>
 
