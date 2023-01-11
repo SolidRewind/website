@@ -58,7 +58,6 @@ function init() {
 // SEND MESSAGES TO IFRAME
 export function setUpMessageRelayingFromSoldRewindToDevtool() {
   window.addEventListener("message", function(event) {
-    console.log("MESSAGE RECIEVED", event.data);
     // We only accept messages from the window. change this to a specific div
     if (event.source !== window) return;
     // send from page to devtoool

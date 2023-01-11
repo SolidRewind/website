@@ -69,9 +69,8 @@ function Home() {
             Intro
           </h3>
           <p>
-            A description of what it does. How it works and why it’s so great. A few of the main features that are undeniably cool. 
+            Solid Rewind alows for Redux-like time-travel debugging and component-tree visualization in apps made with SoldJS. It's powerful, easy to use and install.
             <br></br><br></br>
-            And how easy it is to install.
             <br></br>
             > Learn more about <a href='http://www.solidjs.com' target='_blank'>SolidJS</a>
             <br></br>
@@ -101,7 +100,7 @@ function Home() {
         </div>
       
         <article class='oneHalf smallerPadding mobileExpand installInstructions'>
-          Install the npm package
+          1️. Install the npm package
           <div class='flex'>
             <div id='copyWindow' onclick={ copyNpm }>
               npm i solid-rewind
@@ -112,15 +111,15 @@ function Home() {
             </div>
           </div>
           <br></br><br></br><br></br><br></br>
-          Import Rewind. Wrap Rewind around the top-level component.
+          2️. Import Rewind. Wrap Rewind around the top-level component.
 
           <RewindWrapper />
           {/* <CodeMirror extensions={[basicSetup, python()]} theme={oneDark} showLineNumbers={true} readOnly={true} wrapLine={true} value="print()" /> */}
 
           <br></br><br></br><br></br><br></br>
-          Use the Solid-Rewind Chrome Extension to debug your app.
+          3. Use the Solid-Rewind Chrome Extension to debug your app.
           <br></br><br></br>
-          👉&nbsp;&nbsp;Download <a href='https://chrome.google.com/webstore/detail/solid-rewind/ejdinegdopmimnkbonknknhfmmcgcdoh' target='_blank'>here</a>.
+          &nbsp;&nbsp;👉&nbsp;&nbsp;Download the <a href='https://chrome.google.com/webstore/detail/solid-rewind/ejdinegdopmimnkbonknknhfmmcgcdoh' target='_blank'>Chrome Extension</a>.
         </article>
 
       </section>
@@ -142,6 +141,13 @@ function Home() {
             {(currentVideo() === 2) && <a href='' onMouseOver={()=>setCurrentVideo(2)} >• ????</a>}
             {(currentVideo() !== 2) && <a href='' onMouseOver={()=>setCurrentVideo(2)} >????</a>} */}
           </options>
+          <br></br><br></br>
+          {(currentVideo() === 0) && <p>
+            Use the Solid Rewind Chrome Extension to step through each state change of your SolidJS app.
+          </p>}
+          {(currentVideo() === 1) && <p>
+            The Solid Rewind Chrome Extension is able to construct and visualize a component tree-view of your entire SolidJS app.
+          </p>}
         </div>
 
         <div class='twoThird smallerPadding mobileExpand'>
@@ -179,7 +185,7 @@ function Home() {
             Read More
           </h3>
           <p>☞<a>&nbsp;&nbsp;Medium - Intro To Solid Rewind</a></p>
-          <p>☞<a>&nbsp;&nbsp;Medium - How Solid Rewind works</a></p>
+          {/* <p>☞<a>&nbsp;&nbsp;Medium - How Solid Rewind works</a></p> */}
           <br></br>
       </section>
 
@@ -207,7 +213,8 @@ function Home() {
 
       
       <footer id='footer' class='nav'>
-          <div>© 2023</div>    <div>Read about us on <a href='' target='_blank'>Medium</a> - Follow on <a href='' target='_blank'>GitHub</a></div>
+          <div>© 2023</div>    <div>Follow on <a href='' target='_blank'>GitHub</a></div>
+          {/* >Read about us on <a href='' target='_blank'>Medium</a> -  */}
       </footer>
      </>
 

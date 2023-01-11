@@ -364,7 +364,7 @@ button:hover {
   position: absolute;
   bottom: -13px;
   left: 40px;
-  border-width: 1vw .6vw 0;
+  border-width: 12px 8px 0;
   border-style: solid;
   border-color: #d2d2d2 transparent;
   display: block;

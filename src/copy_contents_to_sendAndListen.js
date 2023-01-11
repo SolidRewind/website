@@ -6,13 +6,6 @@ export const sendData = async ( payload, type ) => {
     payload
   };
   window.parent.postMessage(data, '*');
-
-  // REPLACING THIS CODE:
-    // await chrome.runtime.sendMessage({
-    //   from : 'FROM_DEVTOOL',
-    //   type,
-    //   payload
-    // });
 }
 
 
@@ -32,7 +25,6 @@ export function listenFor(type, callback) {
 
 function init() {
   initComplete[0] = true;
-
   window.addEventListener("message", function(event) {
     let request = event.data
     if (listeners[request.type]) {
@@ -41,19 +33,6 @@ function init() {
       }
     }
   });
-
-  // REPLACED THIS CODE
-      // chrome.runtime.onMessage.addListener(
-      //   function(request, sender, sendResponse) {
-      //     // if type is found in listener list
-      //     if (listeners[request.type]) {
-      //       // execute callback on each function we saved under that type
-      //       for (const cb of listeners[request.type].values()){
-      //         cb( request.payload );
-      //       }
-      //     }
-      //   }
-      // );
 }
 
 // SEND MESSAGES TO IFRAME
@@ -65,10 +44,6 @@ export function setUpMessageRelayingFromSoldRewindToDevtool() {
     if (event.data.from && event.data.from === "FROM_PAGE") {
       document.getElementById('Iframe').contentWindow.postMessage(event.data);
     }
-    // else if (event.data.from && event.data.from === "FROM_DEVTOOL") {
-    //   console.log(event.data)
-    //   document.getElementById('wrapper').contentWindow.postMessage(event.data);
-    // }
   });
 }
 
