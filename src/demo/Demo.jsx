@@ -59,6 +59,12 @@ const Demo = () => {
     setWindows(newWinList);
   }
 
+  const applyOverflowHiddenToBody =()=> {
+    const dragObj = document.querySelector('body');
+    dragObj.style.overflow = 'hidden';
+  }
+  applyOverflowHiddenToBody();
+
   // const editTask= (id) => {
   //   const t = taskList()[id]
   //   const newTaskList = Object.assign({}, taskList());
@@ -80,7 +86,7 @@ const Demo = () => {
         </notice>
 
         <nav class='nav backNav'>
-          <div class='navItem'><a href='/'>back</a></div>
+          <div class='navItem'><a href='/'>return&nbsp;&nbsp;to&nbsp;&nbsp;homepage</a></div>
         </nav>
 
         <DragableWindow id='taskAdder' x={70} y={85}>
@@ -104,7 +110,6 @@ const Demo = () => {
         }</For>
 
       </div>
-      <iframe src = "./Iframe" id='Iframe' class='timelineContainer'></iframe>
     </div>
   );
 };

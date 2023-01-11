@@ -12,6 +12,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-image: url('./assets/gradiant-1.jpg');
+  clip: rect(0, auto, auto, 0);
 }
 
 h3 {
@@ -413,18 +414,18 @@ button:hover {
   cursor: -webkit-grabbing;
 }
 
-.dragBoxIcon {
+.dragBoxIconDemo {
   width: 30px;
   padding-top: 6px;
   margin: -19px auto 14px auto;
 }
 
-.dragBarLine {
+.dragBarLineDemo {
   height: 6px;
   border-top: 1px solid rgb(190, 189, 186);
 }
 
-.dragBarLineBottom {
+.dragBarLineBottomDemo {
   height: 7px !important;
   border-bottom: 1px solid rgb(190, 189, 186);
 }
@@ -470,6 +471,10 @@ button:hover {
 }
 .backNav {
   z-index: 0 !important;
+  width: 60vw;
+}
+.backNav .navItem {
+  text-align: left;
 }
 
 .team {
@@ -568,10 +573,12 @@ button:hover {
 /* DEBUGGER IN DEMO */
 .timelineContainer {
   background-color: white;
-  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 40vw;
   height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
 }

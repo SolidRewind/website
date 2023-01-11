@@ -5,7 +5,10 @@ function DemoWrapper() {
 
   return (
     <Rewind>
-      <Demo/>
+      <div class="hideOverflow">
+        <Demo/>
+      </div>
+      <iframe src = "./Iframe" id='Iframe' class='timelineContainer'></iframe>
     </Rewind>
   );
 }
