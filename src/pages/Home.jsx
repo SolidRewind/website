@@ -83,8 +83,9 @@ function Home() {
             A description of what it does. How it works and why it’s so great. A few of the main features that are undeniably cool. 
             <br></br><br></br>
             And how easy it is to install.
+            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+            Learn more about <a href='http://www.solidjs.com' target='_blank'>SolidJS</a>
           </p>
-          <br></br><br></br>
           {/* <button>GET STARTED</button> */}
         </div>
 
@@ -130,8 +131,6 @@ function Home() {
           Use the Solid-Rewind Chrome Extension to debug your app.
           <br></br><br></br>
           👉&nbsp;&nbsp;Download <a href='https://chrome.google.com/webstore/detail/solid-rewind/ejdinegdopmimnkbonknknhfmmcgcdoh' target='_blank'>here</a>.
-          <br></br><br></br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Learn more about <a href='http://www.solidjs.com' target='_blank'>SolidJS</a>
         </article>
 
       </section>
