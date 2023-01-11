@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@100;200;300;400;500;600;700&display=swap');
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 
 
@@ -19,7 +19,7 @@ body {
 .compName {
   font-family: 'Sofia Sans Condensed', sans-serif;
   font-size: 14px;
-  color: 'steelblue'; 
+  color: steelblue; 
 }
 
 code {

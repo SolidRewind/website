@@ -7,6 +7,7 @@ import '../style/todo-style.css';
 import WindowBox from './WindowBox';
 import WinMaker from './WinMaker';
 import { setUpMessageRelayingFromSoldRewindToDevtool } from '../debugger/sendAndListen';
+import Nav from '../components/Nav';
 
 const Demo = () => {
 
@@ -74,21 +75,24 @@ const Demo = () => {
   setUpMessageRelayingFromSoldRewindToDevtool();
 
   return (
-    <div  class="flex flex-row">
+    <div  class="demoContainer">
+      
+
       <div class='demoBG'>
-
-        <notice id='demoMobilePopupParent'>
-          <div id='demoMobilePopup'>
-            Solid Reqind Demo only availible on desktop.
-
-            <a href='/'>👈&nbsp;&nbsp;back</a>
-          </div>
-        </notice>
 
         <nav class='nav backNav'>
           <div class='navItem'><a href='/'>return&nbsp;&nbsp;to&nbsp;&nbsp;homepage</a></div>
         </nav>
 
+        <notice id='demoMobilePopupParent'>
+          <div id='demoMobilePopup'>
+            Solid Rewind Demo only availible on desktop.
+
+            <a href='/'>👈&nbsp;&nbsp;back</a>
+          </div>
+        </notice>
+
+      
         <DragableWindow id='taskAdder' x={70} y={85}>
           <TaskAdder task={task} submitTask={submitTask} setTask={setTask}  />
         </DragableWindow>
