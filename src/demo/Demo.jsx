@@ -6,10 +6,10 @@ import DragableWindow from './DragableWindow';
 import '../style/todo-style.css';
 import WindowBox from './WindowBox';
 import WinMaker from './WinMaker';
+import { setUpMessageRelayingFromSoldRewindToDevtool } from '../debugger/sendAndListen';
 
 const Demo = () => {
 
-  const [id, setId] = createSignal("");
   const [task, setTask] = createSignal("");
   const [taskList, setTaskList] = createSignal({
     [nanoid(8)] : "Install Solid-Rewind",
@@ -17,7 +17,6 @@ const Demo = () => {
     [nanoid(8)] : "Download Chrome Extension",
     [nanoid(8)] : "Start debugging!"
   });
-  const [numWindows, setNumWindows] = createSignal(0);
   const [windows, setWindows] = createSignal({
     // [nanoid(8)] :<DragableWindow id='dragWin1' x={400} y={90}><WindowBox winNum='1' deleteWin={deleteWin} /></DragableWindow>,
     // [nanoid(8)] :<DragableWindow id='dragWin2' x={450} y={140}><WindowBox winNum='2' deleteWin={deleteWin} /></DragableWindow>,
@@ -66,42 +65,46 @@ const Demo = () => {
   //   newTaskList[id] = task(); 
   //   setTaskList(newTask);
   // }
+  setUpMessageRelayingFromSoldRewindToDevtool();
 
   return (
-    <div class='demoBG'>
+    <div  class="flex flex-row">
+      <div class='demoBG'>
 
-      <notice id='demoMobilePopupParent'>
-        <div id='demoMobilePopup'>
-          Solid Reqind Demo only availible on desktop.
+        <notice id='demoMobilePopupParent'>
+          <div id='demoMobilePopup'>
+            Solid Reqind Demo only availible on desktop.
 
-          <a href='/'>👈&nbsp;&nbsp;back</a>
-        </div>
-      </notice>
+            <a href='/'>👈&nbsp;&nbsp;back</a>
+          </div>
+        </notice>
 
-      <nav class='nav backNav'>
-        <div class='navItem'><a href='/'>back</a></div>
-      </nav>
+        <nav class='nav backNav'>
+          <div class='navItem'><a href='/'>back</a></div>
+        </nav>
 
-      <DragableWindow id='taskAdder' x={70} y={85}>
-        <TaskAdder task={task} submitTask={submitTask} setTask={setTask}  />
-      </DragableWindow>
-
-      <DragableWindow id='taskList' x={70} y={350}>
-        <TaskList taskList={taskList} deleteTask={deleteTask} />  
-      </DragableWindow>
-
-      <DragableWindow id='winMaker' x={400} y={90}>
-        <WinMaker newWin={newWin} />
-      </DragableWindow>
-  
-      <For each={Object.keys(windows())}>{(winkey, i) =>
-
-        <DragableWindow id={'win_' + winkey} x={windows()[winkey][0]} y={windows()[winkey][1]}>
-          <WindowBox winID={winkey} deleteWin={deleteWin} />
+        <DragableWindow id='taskAdder' x={70} y={85}>
+          <TaskAdder task={task} submitTask={submitTask} setTask={setTask}  />
         </DragableWindow>
-        
-      }</For>
 
+        <DragableWindow id='taskList' x={70} y={350}>
+          <TaskList taskList={taskList} deleteTask={deleteTask} />  
+        </DragableWindow>
+
+        <DragableWindow id='winMaker' x={400} y={90}>
+          <WinMaker newWin={newWin} />
+        </DragableWindow>
+    
+        <For each={Object.keys(windows())}>{(winkey, i) =>
+
+          <DragableWindow id={'win_' + winkey} x={windows()[winkey][0]} y={windows()[winkey][1]}>
+            <WindowBox winID={winkey} deleteWin={deleteWin} />
+          </DragableWindow>
+          
+        }</For>
+
+      </div>
+      <iframe src = "./Iframe" id='Iframe' class='timelineContainer'></iframe>
     </div>
   );
 };

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@100;200;300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* COMPONENT TREE */
+.compName {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-size: 14px;
+  color: 'steelblue'; 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.treeView {
+  height: 400px;
+  overflow: scroll;
+  color: black;
+  font-size: 11px;
+  background-color: antiquewhite;
+}
+
+.debugger .dragBar {
+  height: 24px;
+  width: 100%;
+  border-top: 1px solid rgb(230, 223, 214);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.debugger .dragBoxIcon {
+  width: 30px;
+  padding-top: 6px;
+}
+
+.debugger .dragBar:hover {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.debugger .dragBar:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.debugger .dragBarLine {
+  height: 6px;
+  border-top: 1px solid rgb(190, 189, 186);
+}
+
+.debugger .dragBarLineBottom {
+  height: 7px !important;
+  border-bottom: 1px solid rgb(190, 189, 186);
+}
+
+button:hover {
+  transition: color 100ms linear !important;
+  color: white !important;
+}
+
+.displayNone {
+  display: none;
+}

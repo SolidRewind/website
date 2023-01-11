@@ -1,7 +1,9 @@
 import { Routes, Route } from '@solidjs/router'
 
 import Home from './pages/Home';
-import Demo from './demo/Demo'
+import DemoWrapper from './demo/DemoWrapper'
+import Iframe from './demo/Iframe';
+import Rewind from 'solid-rewind';
 
 function App() {
 
@@ -12,7 +14,8 @@ function App() {
 
       <Routes>
         <Route path="/" component={Home} />
-        <Route path="/demo" component={Demo} />
+        <Route path="/demo" component={DemoWrapper} />
+        <Route path="/iframe" component={Iframe} />
       </Routes>
       
     </div>
