@@ -33,9 +33,9 @@ function Nav(props) {
             <div class='navItem'><a onclick={()=> {scrollToId('install', window.scrollY); setShowMobileNav(false)}} >Get Started</a></div>
             <div class='navItem'><a onclick={()=> {scrollToId('team', window.scrollY); setShowMobileNav(false)}} >Team</a></div>
             <div class='navItem'><a href='/demo'>Demo</a></div>
+            <div class='navItem'><a onclick={()=> {scrollToId('readmore', window.scrollY); setShowMobileNav(false)}} target='_blank'>Read More</a></div>
             {/* <div class='navItem'><a href='/docs/installation'>Docs</a></div> */}
             <div class='navItem'><a href='https://github.com/oslabs-beta/solid-rewind' target='_blank'>Github</a></div>
-            <div class='navItem'><a href='https://www.solidjs.com/blog/introducing-solidstart' target='_blank'>Medium Article</a></div>
         </nav>
       }
       <nav class='nav'>
@@ -44,9 +44,9 @@ function Nav(props) {
         { (props.mode==='docs') && <div class='navItem leftNavItem'><a href="/" >Solid Rewind</a></div> }
         <div class='navSpacer'></div>
         <div class='navRightMenu'>
-          <div class='navItem'><a onclick={()=>scrollToId('readmore', window.scrollY)} target='_blank'>Read More</a></div>
           <div class='navItem'><a onclick={()=>scrollToId('team', window.scrollY)} >Team</a></div>
           <div class='navItem'><a href='/demo'>Demo</a></div>
+          <div class='navItem'><a onclick={()=>scrollToId('readmore', window.scrollY)} target='_blank'>Read More</a></div>
           {/* <div class='navItem'><a href='/docs/installation'>Docs</a></div> */}
           <div class='navItem'><a href='https://github.com/oslabs-beta/solid-rewind' target='_blank'>Github</a></div>
         </div>

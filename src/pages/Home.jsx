@@ -133,11 +133,11 @@ function Home() {
             Features
           </h3>
           <options class='bigLink'>
-            {(currentVideo() === 0) && <a href='' onMouseOver={()=>setCurrentVideo(0)} >• Time Travel</a>}
-            {(currentVideo() !== 0) && <a href='' onMouseOver={()=>setCurrentVideo(0)} >Time Travel</a>}
+            {(currentVideo() === 0) && <a onClick={()=>setCurrentVideo(0)} >• Time Travel</a>}
+            {(currentVideo() !== 0) && <a onClick={()=>setCurrentVideo(0)} >Time Travel</a>}
             <br></br>
-            {(currentVideo() === 1) && <a href='' onMouseOver={()=>setCurrentVideo(1)} >• Component Tree View</a>}
-            {(currentVideo() !== 1) && <a href='' onMouseOver={()=>setCurrentVideo(1)} >Component Tree View</a>}
+            {(currentVideo() === 1) && <a onClick={()=>setCurrentVideo(1)} >• Component Tree View</a>}
+            {(currentVideo() !== 1) && <a onClick={()=>setCurrentVideo(1)} >Component Tree View</a>}
             {/* <br></br>
             {(currentVideo() === 2) && <a href='' onMouseOver={()=>setCurrentVideo(2)} >• ????</a>}
             {(currentVideo() !== 2) && <a href='' onMouseOver={()=>setCurrentVideo(2)} >????</a>} */}
