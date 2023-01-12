@@ -10,15 +10,13 @@ export default defineConfig(({ command, mode }) => {
     define: {
       __APP_ENV__: env.APP_ENV,
     },
-    build: {
-      minify: false
-    },
     plugins: [solidPlugin()],
     server: {
       port: 3333,
     },
     build: {
       target: "esnext",
+      minify: false
     },
     optimizeDeps: {
       // Add both @codemirror/state and @codemirror/view to included deps to optimize
