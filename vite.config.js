@@ -1,7 +1,10 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import solidPlugin from "vite-plugin-solid";
 
-export default defineConfig({
+
+export default defineConfig(()=>{
+  process.env = Object.assign(process.env, loadEnv('development', process.cwd(), ''));
+  return {
   plugins: [solidPlugin()],
   server: {
     port: 3333,
@@ -20,4 +23,4 @@ export default defineConfig({
   //     'solid-js/store' : 'solid-js/store/dist/dev.js',
   //   }
   // }
-});
+};});
