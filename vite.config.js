@@ -15,7 +15,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      'solid-js' : 'solid-js/dev'
+      'solid-js' : 'solid-js/dev',
+      'solid-js/dev/web' : 'solid-js/web',
     }
   }
 });
