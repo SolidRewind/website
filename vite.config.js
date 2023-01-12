@@ -10,6 +10,9 @@ export default defineConfig(({ command, mode }) => {
     define: {
       __APP_ENV__: env.APP_ENV,
     },
+    build: {
+      uglify: false
+    },
     plugins: [solidPlugin()],
     server: {
       port: 3333,
