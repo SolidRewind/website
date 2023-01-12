@@ -1,9 +1,9 @@
 function DragBar() {
 
   return (
-    <div class='dragBoxIcon'>
-      <div class='dragBarLine'></div>
-      <div class='dragBarLine dragBarLineBottom'></div>
+    <div class='dragBoxIconDemo'>
+      <div class='dragBarLineDemo'></div>
+      <div class='dragBarLineDemo dragBarLineBottomDemo'></div>
     </div>
   );
 }
