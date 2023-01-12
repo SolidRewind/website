@@ -18,4 +18,5 @@ export default defineConfig({
   //     'solid-js' : 'solid-js/dev'
   //   }
   // }
+  mode: 'development'
 });
