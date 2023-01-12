@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" component={Home} />
         <Route path="/demo" component={DemoWrapper} />
-        {/* <Route path="/IframeDemo" component={IframeDemo} /> */}
+        <Route path="/IframeDemo" component={IframeDemo} />
       </Routes>
       
     </div>
