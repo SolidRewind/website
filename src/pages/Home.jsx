@@ -98,7 +98,7 @@ function Home() {
         </div>
       
         <article class='oneHalf smallerPadding mobileExpand installInstructions'>
-          1️. Install the npm package
+          1. Install the npm package
           <div class='flex'>
             <div id='copyWindow' onclick={ copyNpm }>
               npm i solid-rewind
@@ -109,7 +109,7 @@ function Home() {
             </div>
           </div>
           <br></br><br></br><br></br><br></br>
-          2️. Import Rewind. Wrap Rewind around the top-level component.
+          2. Import Rewind. Wrap Rewind around the top-level component.
 
           <RewindWrapper />
           {/* <CodeMirror extensions={[basicSetup, python()]} theme={oneDark} showLineNumbers={true} readOnly={true} wrapLine={true} value="print()" /> */}

@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "start": "NODE_ENV=development vite",
+    "start": "NODE_ENV=production vite",
     "dev": "NODE_ENV=development vite",
-    "build": "NODE_ENV=development vite build",
+    "build": "vite build",
     "serve": "vite preview",
     "deploy-aws": "node aws-upload.js"
       
@@ -29,6 +29,6 @@
     "aws-sdk": "^2.1291.0",
     "codemirror": "^6.0.1",
     "solid-codemirror": "^2.2.1",
-    "solid-rewind": "^1.1.7"
+    "solid-rewind": "^1.1.8"
   }
 }
