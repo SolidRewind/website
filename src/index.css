@@ -600,3 +600,11 @@ button:hover {
   font-weight: 600;
   color: #ffc740;
 }
+.versionNo {
+  position: absolute;
+  font-weight: 600;
+  left: 10px;
+  bottom: 10px;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.5);
+}
