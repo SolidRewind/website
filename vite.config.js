@@ -16,7 +16,7 @@ export default defineConfig(({ command, mode }) => {
     },
     build: {
       target: "esnext",
-      minify: false
+      // minify: false
     },
     optimizeDeps: {
       // Add both @codemirror/state and @codemirror/view to included deps to optimize

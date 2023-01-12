@@ -6,6 +6,7 @@ import {
     zoom, 
     zoomIdentity } from 'd3';
 import { createSignal } from 'solid-js';
+import { getName } from '../demo/unUglify';
 import { listenFor } from './sendAndListen';
 
 
@@ -71,14 +72,15 @@ const buildD3Tree = (treeData) => {
   node.append("foreignObject")
     .attr("x", -50)
     .attr('y', (d) => {
-      return lineHeight + (getLineNumbers(d.data.componentName)) * lineHeight;
+      return lineHeight + (getLineNumbers( getName( d.data.componentName) )) * lineHeight;
     })
     .attr("width", 100)
     .attr("height", 300)
     .append("xhtml:section")
     .style("color", "steelblue")
     .html(d => {
-      let compName = d.data.componentName;
+      let compName = getName( d.data.componentName);
+      
       // parse out _Hot$$ added by ES6 arrow functions
       if (compName.includes('_Hot$$')) {
         const start = compName.indexOf("$") + 2;

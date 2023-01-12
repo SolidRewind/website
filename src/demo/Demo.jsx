@@ -7,7 +7,7 @@ import '../style/todo-style.css';
 import WindowBox from './WindowBox';
 import WinMaker from './WinMaker';
 import { setUpMessageRelayingFromSoldRewindToDevtool } from '../debugger/sendAndListen';
-import Version from './Version';
+// import Version from './Version';
 
 const Demo = () => {
 
@@ -113,7 +113,7 @@ const Demo = () => {
         }</For>
 
       </div>
-      <Version />
+      {/* <Version /> */}
     </div>
   );
 };
