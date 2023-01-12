@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" component={Home} />
         <Route path="/demo" component={DemoWrapper} />
-        <Route path="/iframe" component={Iframe} />
+        <Route path="/Iframe" component={Iframe} />
       </Routes>
       
     </div>
