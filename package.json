@@ -29,6 +29,6 @@
     "aws-sdk": "^2.1291.0",
     "codemirror": "^6.0.1",
     "solid-codemirror": "^2.2.1",
-    "solid-rewind": "^1.1.0"
+    "solid-rewind": "^1.1.1"
   }
 }
