@@ -184,7 +184,8 @@ function Home() {
           <h3>
             Read More
           </h3>
-          <p>☞<a>&nbsp;&nbsp;Medium - Intro To Solid Rewind</a></p>
+          <p>coming soon</p>
+          {/* <p>☞<a>&nbsp;&nbsp;Medium - Intro To Solid Rewind</a></p> */}
           {/* <p>☞<a>&nbsp;&nbsp;Medium - How Solid Rewind works</a></p> */}
           <br></br>
       </section>
