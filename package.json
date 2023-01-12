@@ -5,7 +5,7 @@
   "scripts": {
     "start": "NODE_ENV=production vite",
     "dev": "NODE_ENV=development vite",
-    "build": "vite build",
+    "build": "vite build --mode development",
     "serve": "vite preview",
     "deploy-aws": "node aws-upload.js"
       
