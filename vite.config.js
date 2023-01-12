@@ -13,5 +13,9 @@ export default defineConfig({
     // Add both @codemirror/state and @codemirror/view to included deps to optimize
     include: ["@codemirror/state", "@codemirror/view"],
   },
-  base: './'
+  resolve: {
+    alias: {
+      'solid-js' : 'solid-js/dev'
+    }
+  }
 });
