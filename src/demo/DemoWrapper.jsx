@@ -5,7 +5,7 @@ function DemoWrapper() {
 
   return (
 
-    <Rewind runInProduction={true}>
+    <Rewind>
       <div class="hideOverflow">
         <Demo/>
       </div>
