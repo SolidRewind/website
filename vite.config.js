@@ -11,7 +11,7 @@ export default defineConfig(({ command, mode }) => {
       __APP_ENV__: env.APP_ENV,
     },
     build: {
-      uglify: false
+      minify: false
     },
     plugins: [solidPlugin()],
     server: {
