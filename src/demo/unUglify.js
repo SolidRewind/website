@@ -5,9 +5,12 @@ const nameDictionary = {
   AC : 'Demo',
   rs : 'DragableWindow',
   vO : 'For',
+  v0 : 'For',
   rl : 'DragBar',
   kC : 'WindowBox',
   WC : 'TaskAdder',
+  wC : 'TaskAdder',
+  lC : 'WinMaker',
   $C : 'TaskAdder',
 }
 
