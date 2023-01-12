@@ -2,31 +2,20 @@ import { render } from 'solid-js/web';
 import { Routes, Route } from '@solidjs/router'
 import { createSignal, getOwner } from 'solid-js';
 import logo from '../assets/solid-rewind-logo.svg';
-import screenshot from '../assets/screenshots/screenshot-1.png';
-import videoA from '../assets/video/video-a.mp4';
-import videoB from '../assets/video/video-b.mp4';
-import videoC from '../assets/video/video-c.mp4';
-import vidBox from '../assets/video/video-box.jpg'
+
 import christian from '../assets/contributors/Christian.jpeg';
 import robbie from '../assets/contributors/Robbie.jpeg';
 import willem from '../assets/contributors/Willem.jpeg';
 import json from '../assets/contributors/Jason.jpeg';
 
-import vidTimeTravelTopBox from '../assets/video/time-travel-new-box.jpg';
-import vidTimeTravelTop from '../assets/video/time-travel-new.mp4';
-import vidTimeTravel from '../assets/video/time-travel2.mp4';
-import vidTreeView from '../assets/video/tree-view.mp4';
+import topVideoImageBox from '../assets/video/top-video-box-img.jpg';
+import topVideo from '../assets/video/top-video.mp4';
+import featureTimeTrave from '../assets/video/feature-time-travel.mp4';
+import featureCompTree from '../assets/video/feature-comp-tree.mp4';
+import featureBoxImg from '../assets/video/feature-box-img.jpg'
 
 
 import RewindWrapper from '../components/RewindWrap'
-
-// import { createCodeMirror } from 'solid-codemirror';
-import { javascript } from "@codemirror/lang-javascript";
-
-import { CodeMirror } from "@solid-codemirror/codemirror";
-import { basicSetup } from "codemirror";
-import { python } from "@codemirror/lang-python";
-import { oneDark } from "@codemirror/theme-one-dark";
 
 import Nav from '../components/Nav';
 import Contributor from '../components/Contributor';
@@ -80,11 +69,11 @@ function Home() {
             Intro
           </h3>
           <p>
-            A description of what it does. How it works and why it’s so great. A few of the main features that are undeniably cool. 
+            Solid Rewind is a Redux-style time-travel debugger and component-tree visualizer for apps made with SolidJS. It's powerful, easy to use and install.
             <br></br><br></br>
-            And how easy it is to install.
-            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-            Learn more about <a href='http://www.solidjs.com' target='_blank'>SolidJS</a>
+            <br></br>
+            > Learn more about <a href='http://www.solidjs.com' target='_blank'>SolidJS</a>
+            <br></br>
           </p>
           {/* <button>GET STARTED</button> */}
         </div>
@@ -92,8 +81,8 @@ function Home() {
         <div class='twoThird mobileExpand'>
           <figure class='fullbox aboutImage'>
             
-            <video id="background-video" autoplay loop muted poster={vidTimeTravelTopBox}>
-              <source src={vidTimeTravelTop} type="video/mp4"></source>
+            <video id="background-video" autoplay loop muted poster={topVideoImageBox}>
+              <source src={topVideo} type="video/mp4"></source>
             </video>
             {/* <img class='transparent' src={screenshot}></img> */}
           </figure>
@@ -111,7 +100,7 @@ function Home() {
         </div>
       
         <article class='oneHalf smallerPadding mobileExpand installInstructions'>
-          Install the npm package
+          1️. Install the npm package
           <div class='flex'>
             <div id='copyWindow' onclick={ copyNpm }>
               npm i solid-rewind
@@ -122,15 +111,15 @@ function Home() {
             </div>
           </div>
           <br></br><br></br><br></br><br></br>
-          Import Rewind. Wrap Rewind around the top-level component.
+          2️. Import Rewind. Wrap Rewind around the top-level component.
 
           <RewindWrapper />
           {/* <CodeMirror extensions={[basicSetup, python()]} theme={oneDark} showLineNumbers={true} readOnly={true} wrapLine={true} value="print()" /> */}
 
           <br></br><br></br><br></br><br></br>
-          Use the Solid-Rewind Chrome Extension to debug your app.
+          3. Use the Solid-Rewind Chrome Extension to debug your app.
           <br></br><br></br>
-          👉&nbsp;&nbsp;Download <a href='https://chrome.google.com/webstore/detail/solid-rewind/ejdinegdopmimnkbonknknhfmmcgcdoh' target='_blank'>here</a>.
+          &nbsp;&nbsp;👉&nbsp;&nbsp;Download the <a href='https://chrome.google.com/webstore/detail/solid-rewind/ejdinegdopmimnkbonknknhfmmcgcdoh' target='_blank'>Chrome Extension</a>.
         </article>
 
       </section>
@@ -143,30 +132,35 @@ function Home() {
             Features
           </h3>
           <options class='bigLink'>
-            {(currentVideo() === 0) && <a href='' onMouseOver={()=>setCurrentVideo(0)} >• Time Travel</a>}
-            {(currentVideo() !== 0) && <a href='' onMouseOver={()=>setCurrentVideo(0)} >Time Travel</a>}
+            {(currentVideo() === 0) && <a onClick={()=>setCurrentVideo(0)} >• Time Travel</a>}
+            {(currentVideo() !== 0) && <a onClick={()=>setCurrentVideo(0)} >Time Travel</a>}
             <br></br>
-            {(currentVideo() === 1) && <a href='' onMouseOver={()=>setCurrentVideo(1)} >• Component Tree View</a>}
-            {(currentVideo() !== 1) && <a href='' onMouseOver={()=>setCurrentVideo(1)} >Component Tree View</a>}
+            {(currentVideo() === 1) && <a onClick={()=>setCurrentVideo(1)} >• Component Tree View</a>}
+            {(currentVideo() !== 1) && <a onClick={()=>setCurrentVideo(1)} >Component Tree View</a>}
             {/* <br></br>
             {(currentVideo() === 2) && <a href='' onMouseOver={()=>setCurrentVideo(2)} >• ????</a>}
             {(currentVideo() !== 2) && <a href='' onMouseOver={()=>setCurrentVideo(2)} >????</a>} */}
           </options>
+          <br></br><br></br>
+          {(currentVideo() === 0) && <p>
+            Use the Solid Rewind Chrome Extension to step through each state change of your SolidJS app.
+          </p>}
+          {(currentVideo() === 1) && <p>
+            The Solid Rewind Chrome Extension is able to construct and visualize a component tree-view of your entire SolidJS app.
+          </p>}
         </div>
 
         <div class='twoThird smallerPadding mobileExpand'>
           <figure class='fullbox aboutImage'>
-            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/kJQP7kiw5Fk?frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; allowfullscreen" ></iframe> */}
-
 
             {(currentVideo() === 0) && 
-              <video id="background-video" autoplay loop muted poster={vidBox}>
-                <source src={vidTimeTravel} type="video/mp4"></source>
+              <video id="background-video" autoplay loop muted poster={featureBoxImg}>
+                <source src={featureTimeTrave} type="video/mp4"></source>
               </video>
             }
             {(currentVideo() === 1) && 
-              <video id="background-video" autoplay loop muted poster={vidBox}>
-                <source src={vidTreeView} type="video/mp4"></source>
+              <video id="background-video" autoplay loop muted poster={featureBoxImg}>
+                <source src={featureCompTree} type="video/mp4"></source>
               </video>
             }
             {/* {(currentVideo() === 2) && 
@@ -183,6 +177,16 @@ function Home() {
       </section>
 
 
+
+      <section class='contentSection smallerPadding oneWhole' id='readmore'>
+          <h3>
+            Read More
+          </h3>
+          <p>coming soon</p>
+          {/* <p>☞<a>&nbsp;&nbsp;Medium - Intro To Solid Rewind</a></p> */}
+          {/* <p>☞<a>&nbsp;&nbsp;Medium - How Solid Rewind works</a></p> */}
+          <br></br>
+      </section>
 
 
       <section class='contentSection smallerPadding oneWhole' id='team'>
@@ -208,7 +212,8 @@ function Home() {
 
       
       <footer id='footer' class='nav'>
-          <div>© 2023</div>    <div>Read about us on <a href='' target='_blank'>Medium</a> - Follow on <a href='' target='_blank'>GitHub</a></div>
+          <div>© 2023</div>    <div>Follow on <a href='' target='_blank'>GitHub</a></div>
+          {/* >Read about us on <a href='' target='_blank'>Medium</a> -  */}
       </footer>
      </>
 

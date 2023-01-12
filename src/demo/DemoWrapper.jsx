@@ -1,11 +1,14 @@
 import Rewind from "solid-rewind";
-import Demo from "./Demo";
-
+// import Rewind from '../../../solid-rewind/rewind-devtool/src/Rewind';
+import Demo from "./Demo.jsx";
 function DemoWrapper() {
 
   return (
     <Rewind runInProduction={true}>
-      <Demo/>
+      <div class="hideOverflow">
+        <Demo/>
+      </div>
+      <iframe src = "./IframeDemo" id='IframeDemo' class='timelineContainer'></iframe>
     </Rewind>
   );
 }

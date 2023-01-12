@@ -12,8 +12,11 @@ body {
   width: 100vw;
   height: 100vh;
   background-image: url('./assets/gradiant-1.jpg');
+  clip: rect(0, auto, auto, 0);
 }
-
+.demoNav{
+  height:300px;
+}
 h3 {
   font-family: 'Syne', sans-serif;
   font-weight: 600;
@@ -26,7 +29,11 @@ h3 {
 a {
   cursor: pointer;
 }
-
+.demoContainer{
+  display: flex;
+  flex-direction: row;
+  height: 10px;
+}
 
 /* NAV */
 .docsTopNav .nav {
@@ -37,7 +44,10 @@ a {
 .docsTopNav .nav .navItem a {
   color: black;
 }
-
+.demoNav .nav{
+  width: 55vw;
+  color: orange;
+}
 .nav {
   border-top: 2px solid white;
   border-bottom: 2px solid white;
@@ -288,7 +298,7 @@ p {
 
 button {
   background-color: #ffc740 !important;
-  padding: .75vw 1.5vw !important;
+  padding: 10px 15px !important;
   font-size: 15pt !important;
   font-family: 'Syne', sans-serif !important;
   font-weight: 600 !important;
@@ -354,7 +364,7 @@ button:hover {
   position: absolute;
   bottom: -13px;
   left: 40px;
-  border-width: 1vw .6vw 0;
+  border-width: 12px 8px 0;
   border-style: solid;
   border-color: #d2d2d2 transparent;
   display: block;
@@ -413,18 +423,18 @@ button:hover {
   cursor: -webkit-grabbing;
 }
 
-.dragBoxIcon {
+.dragBoxIconDemo {
   width: 30px;
   padding-top: 6px;
   margin: -19px auto 14px auto;
 }
 
-.dragBarLine {
+.dragBarLineDemo {
   height: 6px;
   border-top: 1px solid rgb(190, 189, 186);
 }
 
-.dragBarLineBottom {
+.dragBarLineBottomDemo {
   height: 7px !important;
   border-bottom: 1px solid rgb(190, 189, 186);
 }
@@ -435,7 +445,7 @@ button:hover {
   border-top: 2px solid white;
   /* background-color: black; */
   border-bottom: 2px solid white;
-  width: 100vw;
+  width: vw;
   top: 0;
   padding: 2px 4vw 4px 4vw;
   height: 48px;
@@ -470,6 +480,10 @@ button:hover {
 }
 .backNav {
   z-index: 0 !important;
+  width: 100vw;
+}
+.backNav .navItem {
+  text-align: left;
 }
 
 .team {
@@ -561,4 +575,36 @@ button:hover {
   #rewindBehind {
     -webkit-text-stroke-width: 2px;
   }
+}
+
+
+
+/* DEBUGGER IN DEMO */
+.timelineContainer {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.demoDisclaimer {
+  margin-top: 15px;
+  font-size: 13px;
+  color: black;
+}
+.demoDisclaimer a {
+  font-weight: 600;
+  color: #ffc740;
+}
+.versionNo {
+  position: absolute;
+  font-weight: 600;
+  left: 10px;
+  bottom: 10px;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.5);
 }
