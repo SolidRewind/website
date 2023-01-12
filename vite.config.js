@@ -9,20 +9,21 @@ export default defineConfig(({ command, mode }) => {
     // vite config
     define: {
       __APP_ENV__: env.APP_ENV,
-      plugins: [solidPlugin()],
-      server: {
-        port: 3333,
-      },
-      build: {
-        target: "esnext",
-      },
-      optimizeDeps: {
-        // Add both @codemirror/state and @codemirror/view to included deps to optimize
-        include: ["@codemirror/state", "@codemirror/view"],
-      },
-      mode: 'development'
-    }
+    },
+    plugins: [solidPlugin()],
+    server: {
+      port: 3333,
+    },
+    build: {
+      target: "esnext",
+    },
+    optimizeDeps: {
+      // Add both @codemirror/state and @codemirror/view to included deps to optimize
+      include: ["@codemirror/state", "@codemirror/view"],
+    },
+    mode: 'development'
   }
+  
 })
 
 // export default defineConfig({
