@@ -1,15 +1,14 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
-import { Router, pathIntegration } from '@solidjs/router'
+import { Router } from '@solidjs/router'
 
 import './index.css';
 import App from './App';
 import Rewind from 'solid-rewind';
 
 render(() => (
-  <Rewind runInProduction={true}>
-
-      <Router integration={pathIntegration()}>
+    <Rewind runInProduction={true}>
+      <Router>
         <App />
       </Router>
     </Rewind>
