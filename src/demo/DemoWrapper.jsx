@@ -8,7 +8,7 @@ function DemoWrapper() {
       <div class="hideOverflow">
         <Demo/>
       </div>
-      <iframe src = "./Iframe" id='Iframe' class='timelineContainer'></iframe>
+      <iframe src = "./IframeDemo" id='IframeDemo' class='timelineContainer'></iframe>
     </Rewind>
   );
 }

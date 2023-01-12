@@ -42,12 +42,12 @@ export function setUpMessageRelayingFromSoldRewindToDevtool() {
     if (event.source !== window) return;
     // send from page to devtoool
     if (event.data.from && event.data.from === "FROM_PAGE") {
-      document.getElementById('Iframe').contentWindow.postMessage(event.data);
+      document.getElementById('IframeDemo').contentWindow.postMessage(event.data);
     }
   });
 }
 
 // testing only
 export function testSendMessageToDevtool(data) {
-  document.getElementById('Iframe').contentWindow.postMessage(data);
+  document.getElementById('IframeDemo').contentWindow.postMessage(data);
 }

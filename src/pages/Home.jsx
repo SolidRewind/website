@@ -152,8 +152,6 @@ function Home() {
 
         <div class='twoThird smallerPadding mobileExpand'>
           <figure class='fullbox aboutImage'>
-            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/kJQP7kiw5Fk?frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; allowfullscreen" ></iframe> */}
-
 
             {(currentVideo() === 0) && 
               <video id="background-video" autoplay loop muted poster={featureBoxImg}>

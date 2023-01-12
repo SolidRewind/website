@@ -1,14 +1,14 @@
 import App from '../debugger/App'
 import { setUpMessageRelayingFromSoldRewindToDevtool } from '../debugger/sendAndListen'
 
-function Iframe(){
+function IframeDemo(){
 
   return (
     <App />
   )
 }
 
-export default Iframe
+export default IframeDemo
 
 
 
