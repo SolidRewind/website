@@ -11,6 +11,8 @@ const nameDictionary = {
   WC : 'TaskAdder',
   wC : 'TaskAdder',
   lC : 'WinMaker',
+  '1C' : 'WinMaker',
+  IC : 'WinMaker',
   $C : 'TaskAdder',
 }
 
