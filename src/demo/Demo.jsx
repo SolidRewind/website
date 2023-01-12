@@ -7,7 +7,6 @@ import '../style/todo-style.css';
 import WindowBox from './WindowBox';
 import WinMaker from './WinMaker';
 import { setUpMessageRelayingFromSoldRewindToDevtool } from '../debugger/sendAndListen';
-import Nav from '../components/Nav';
 
 const Demo = () => {
 
@@ -77,7 +76,6 @@ const Demo = () => {
   return (
     <div  class="demoContainer">
       
-
       <div class='demoBG'>
 
         <nav class='nav backNav'>
