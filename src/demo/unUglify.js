@@ -19,5 +19,5 @@ const nameDictionary = {
 
 export const getName = (compName) => {
   console.log('incoming name', compName);
-  return nameDictionary[compName] ?nameDictionary[compName] : compName;
+  return nameDictionary[compName] ?nameDictionary[compName] : 'AppComp';
 }
