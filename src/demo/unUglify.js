@@ -1,8 +1,14 @@
 
 const nameDictionary = {
   pC : 'App',
+  gC : 'App',
   AC : 'Demo',
-  rs : 'DragableWindow'
+  rs : 'DragableWindow',
+  vO : 'For',
+  rl : 'DragBar',
+  kC : 'WindowBox',
+  WC : 'TaskAdder',
+  $C : 'TaskAdder',
 }
 
 
