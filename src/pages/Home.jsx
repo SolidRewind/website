@@ -1,6 +1,4 @@
-import { render } from 'solid-js/web';
-import { Routes, Route } from '@solidjs/router'
-import { createSignal, getOwner } from 'solid-js';
+import { createSignal } from 'solid-js';
 import logo from '../assets/solid-rewind-logo.svg';
 
 import christian from '../assets/contributors/Christian.jpeg';

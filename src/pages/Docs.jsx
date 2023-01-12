@@ -1,4 +1,4 @@
-import { render } from 'solid-js/web';
+
 import { Routes, Route } from '@solidjs/router'
 import '../style/docs-style.css'
 
