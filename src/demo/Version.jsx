@@ -2,7 +2,7 @@ import { createSignal } from 'solid-js';
 
 function Version() {
 
-  const [versionNo, setVersionNo] = createSignal('1.0.1');
+  const [versionNo, setVersionNo] = createSignal('1.0.2');
   return (
     <div class='versionNo'>
       v{versionNo}
