@@ -4,7 +4,7 @@ import Demo from "./Demo.jsx";
 function DemoWrapper() {
 
   return (
-    <Rewind runInProduction='true'>
+    <Rewind runInProduction={true}>
       <div class="hideOverflow">
         <Demo/>
       </div>
