@@ -98,7 +98,7 @@ function Home() {
         </div>
       
         <article class='oneHalf smallerPadding mobileExpand installInstructions'>
-          1. Install the npm package
+          1. Install the <a href='https://www.npmjs.com/package/solid-rewind' target='_blank'>npm</a> or <a href='https://yarnpkg.com/package/solid-rewind' target='_blank'>yarn</a> package
           <div class='flex'>
             <div id='copyWindow' onclick={ copyNpm }>
               npm i solid-rewind
@@ -180,9 +180,8 @@ function Home() {
           <h3>
             Read More
           </h3>
-          <p>coming soon</p>
-          {/* <p>☞<a>&nbsp;&nbsp;Medium - Intro To Solid Rewind</a></p> */}
-          {/* <p>☞<a>&nbsp;&nbsp;Medium - How Solid Rewind works</a></p> */}
+          <p>☞<a href='https://medium.com/@robbiegottlieb/solid-rewind-an-introduction-3f013a4e237c' target="_blank">&nbsp;&nbsp;Medium - Solid Rewind: An Introduction</a></p>
+          <p>☞<a href='https://medium.com/@robbiegottlieb/solid-rewind-how-its-made-c608008f2f89' target="_blank">&nbsp;&nbsp;Medium - Solid Rewind: How It’s Made</a></p>
           <br></br>
       </section>
 
