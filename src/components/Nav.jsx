@@ -30,23 +30,23 @@ function Nav(props) {
       {showMobileNav() &&
         <nav class="mobileMenu">
             <div id="mobileMenuCloseBtn" onclick={() => setShowMobileNav(false)} >X</div>
-            <div class='navItem'><a onclick={()=> {scrollToId('install', window.scrollY); setShowMobileNav(false)}} >Get Started</a></div>
-            <div class='navItem'><a onclick={()=> {scrollToId('team', window.scrollY); setShowMobileNav(false)}} >Team</a></div>
+            <div class='navItem'><span onclick={()=> {scrollToId('install', window.scrollY); setShowMobileNav(false)}} >Get Started</span></div>
+            <div class='navItem'><span onclick={()=> {scrollToId('team', window.scrollY); setShowMobileNav(false)}} >Team</span></div>
             <div class='navItem'><a href='/demo'>Demo</a></div>
-            <div class='navItem'><a onclick={()=> {scrollToId('readmore', window.scrollY); setShowMobileNav(false)}} target='_blank'>Read More</a></div>
+            <div class='navItem'><span onclick={()=> {scrollToId('readmore', window.scrollY); setShowMobileNav(false)}} target='_blank'>Read More</span></div>
             {/* <div class='navItem'><a href='/docs/installation'>Docs</a></div> */}
             <div class='navItem'><a href='https://github.com/oslabs-beta/solid-rewind' target='_blank'>Github</a></div>
         </nav>
       }
       <nav class='nav'>
         {/* href='/#install' */}
-        { (props.mode!=='docs') && <div class='navItem leftNavItem'><a onclick={()=>scrollToId('install', window.scrollY)} >Get Started</a></div> }
-        { (props.mode==='docs') && <div class='navItem leftNavItem'><a href="/" >Solid Rewind</a></div> }
+        { (props.mode!=='docs') && <div class='navItem leftNavItem'><span onclick={()=>scrollToId('install', window.scrollY)} >Get Started</span></div> }
+        { (props.mode==='docs') && <div class='navItem leftNavItem'><span href="/" >Solid Rewind</span></div> }
         <div class='navSpacer'></div>
         <div class='navRightMenu'>
-          <div class='navItem'><a onclick={()=>scrollToId('team', window.scrollY)} >Team</a></div>
+          <div class='navItem'><span onclick={()=>scrollToId('team', window.scrollY)} >Team</span></div>
           <div class='navItem'><a href='/demo'>Demo</a></div>
-          <div class='navItem'><a onclick={()=>scrollToId('readmore', window.scrollY)} target='_blank'>Read More</a></div>
+          <div class='navItem'><span onclick={()=>scrollToId('readmore', window.scrollY)} target='_blank'>Read More</span></div>
           {/* <div class='navItem'><a href='/docs/installation'>Docs</a></div> */}
           <div class='navItem'><a href='https://github.com/oslabs-beta/solid-rewind' target='_blank'>Github</a></div>
         </div>

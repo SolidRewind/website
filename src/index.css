@@ -44,6 +44,9 @@ a {
 .docsTopNav .nav .navItem a {
   color: black;
 }
+.docsTopNav .nav .navItem span {
+  color: black;
+}
 .demoNav .nav{
   width: 55vw;
   color: orange;
@@ -68,12 +71,14 @@ a {
 .navItem {
   flex-grow: 1;
   text-align: right;
+  cursor: pointer;
 }
 
 .navRightMenu {
   display: flex;
   justify-content: space-between;
   flex-grow: 4;
+  
 }
 
 .mobileMenuOpenBtn {
@@ -114,12 +119,29 @@ a {
   display: none;
 }
 
+.navItem span {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 10pt;
+  color: white;
+  text-transform: uppercase;
+}
 .navItem a {
   font-family: 'Syne', sans-serif;
   font-weight: 600;
   font-size: 10pt;
   color: white;
   text-transform: uppercase;
+}
+.navItem span {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 10pt;
+  color: white;
+  text-transform: uppercase;
+}
+.navItem span:hover {
+  /* color: #ffc740; */
 }
 .navItem a:hover {
   /* color: #ffc740; */
@@ -224,6 +246,10 @@ p {
   color: #ffc740;
 }
 
+.contentSection span {
+  color: #ffc740;
+}
+
 .contentSection {
   position: relative;
   background-color: black;
@@ -291,6 +317,7 @@ p {
   font-weight: 600 !important;
   color: white !important;
   transition: color 0.16s ease;
+  cursor: pointer;
 }
 .bigLink:hover {
   color: #ffa340 !important;
@@ -478,6 +505,9 @@ button:hover {
 #demoMobilePopup a {
   margin-top: 6vh;
 }
+#demoMobilePopup span {
+  margin-top: 6vh;
+}
 .backNav {
   z-index: 0 !important;
   width: 100vw;
@@ -517,6 +547,9 @@ button:hover {
 }
 
 #footer a {
+  color: #ffc740;
+}
+#footer span {
   color: #ffc740;
 }
 
@@ -597,6 +630,10 @@ button:hover {
   color: black;
 }
 .demoDisclaimer a {
+  font-weight: 600;
+  color: #ffc740;
+}
+.demoDisclaimer span {
   font-weight: 600;
   color: #ffc740;
 }

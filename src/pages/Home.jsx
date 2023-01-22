@@ -1,10 +1,10 @@
 import { createSignal } from 'solid-js';
 import logo from '../assets/solid-rewind-logo.svg';
 
-import christian from '../assets/contributors/Christian.jpeg';
-import robbie from '../assets/contributors/Robbie.jpeg';
-import willem from '../assets/contributors/Willem.jpeg';
-import json from '../assets/contributors/Jason.jpeg';
+import christian from '../assets/contributors/Christian.webp';
+import robbie from '../assets/contributors/Robbie.webp';
+import willem from '../assets/contributors/Willem.webp';
+import json from '../assets/contributors/Jason.webp';
 
 import topVideoImageBox from '../assets/video/top-video-box-img.jpg';
 import topVideo from '../assets/video/top-video.mp4';
@@ -41,7 +41,7 @@ function Home() {
 
         <div id='heroContent'>
 
-          <img src={logo} class="logo" />
+          <img src={logo} class="logo" alt="Solid-Rewind company logo" />
 
           <h1 id='heroTitle'>
             SOLID<br></br>
@@ -130,11 +130,11 @@ function Home() {
             Features
           </h3>
           <options class='bigLink'>
-            {(currentVideo() === 0) && <a onClick={()=>setCurrentVideo(0)} >• Time Travel</a>}
-            {(currentVideo() !== 0) && <a onClick={()=>setCurrentVideo(0)} >Time Travel</a>}
+            {(currentVideo() === 0) && <span onClick={()=>setCurrentVideo(0)} >• Time Travel</span>}
+            {(currentVideo() !== 0) && <span onClick={()=>setCurrentVideo(0)} >Time Travel</span>}
             <br></br>
-            {(currentVideo() === 1) && <a onClick={()=>setCurrentVideo(1)} >• Component Tree View</a>}
-            {(currentVideo() !== 1) && <a onClick={()=>setCurrentVideo(1)} >Component Tree View</a>}
+            {(currentVideo() === 1) && <span onClick={()=>setCurrentVideo(1)} >• Component Tree View</span>}
+            {(currentVideo() !== 1) && <span onClick={()=>setCurrentVideo(1)} >Component Tree View</span>}
             {/* <br></br>
             {(currentVideo() === 2) && <a href='' onMouseOver={()=>setCurrentVideo(2)} >• ????</a>}
             {(currentVideo() !== 2) && <a href='' onMouseOver={()=>setCurrentVideo(2)} >????</a>} */}
@@ -209,7 +209,7 @@ function Home() {
 
       
       <footer id='footer' class='nav'>
-          <div>© 2023</div>    <div>Follow on <a href='' target='_blank'>GitHub</a></div>
+          <div>© 2023</div>    <div>Follow on <a href='https://github.com/oslabs-beta/solid-rewind' target='_blank'>GitHub</a></div>
           {/* >Read about us on <a href='' target='_blank'>Medium</a> -  */}
       </footer>
      </>

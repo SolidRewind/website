@@ -219,7 +219,7 @@ function RewindWrapper() {
 
 
   return (
-    <CodeMirror id='rewindWrapper' extensions={[basicSetup, python()]} theme={oneDark} showLineNumbers={true} readOnly={true} wrapLine={true} value={steps[rwCodeStage()][0]} />      
+    <CodeMirror id='rewindWrapper' extensions={[basicSetup, python()]} theme={oneDark} showLineNumbers={true} readOnly={true} wrapLine={true} aria-label="example installation textbox" value={steps[rwCodeStage()][0] } />      
   );
 }
 
