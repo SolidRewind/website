@@ -70,7 +70,7 @@ function Home() {
             Solid Rewind is a Redux-style time-travel debugger and component-tree visualizer for apps made with SolidJS. It's powerful, easy to use and install.
             <br></br><br></br>
             <br></br>
-            > Learn more about <a href='http://www.solidjs.com' target='_blank'>SolidJS</a>
+            {'>'} Learn more about <a href='http://www.solidjs.com' target='_blank'>SolidJS</a>
             <br></br>
           </p>
           {/* <button>GET STARTED</button> */}
