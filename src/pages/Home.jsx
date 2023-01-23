@@ -199,7 +199,7 @@ function Home() {
           </p> */}
           <div class='team'>
             <Contributor name='Christian Catanese' portrait={christian} linkedIn='https://www.linkedin.com/in/christian-catanese' gitHub='https://github.com/c-catanese' />
-            <Contributor name='Robbie Gottlieb' portrait={robbie} linkedIn='https://www.linkedin.com/in/robbie-gottlieb/' gitHub='https://github.com/boblobblieb' />
+            <Contributor name='Robbie Gottlieb' portrait={robbie} linkedIn='https://www.linkedin.com/in/robbie-gottlieb/' gitHub='https://github.com/robbiegot' />
             <Contributor name='Willem Rosenthal' portrait={willem} linkedIn='https://www.linkedin.com/in/willem-rosenthal/' gitHub='https://github.com/willemrosenthal' />
             <Contributor name='Jason Moon' portrait={json} linkedIn='https://www.linkedin.com/in/jason-joonsik-moon/' gitHub='https://github.com/Crescent0130' />
           </div>
